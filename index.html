@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talum · Clínica Podológica en Repelega, Portugalete</title>
 <meta name="description" content="Clínica podológica en Avenida Repelega 11, Portugalete. Quiropodología, biomecánica deportiva y ecografía del pie. Cuarta generación. Pide cita online.">
-<link rel="canonical" href="https://pruebatalum.netlify.app/">
+<link rel="canonical" href="https://talumpodologia.vercel.app/">
 <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -13,17 +13,17 @@
 <link rel="manifest" href="/assets/favicon/site.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
-<meta property="og:url" content="https://pruebatalum.netlify.app/">
+<meta property="og:url" content="https://talumpodologia.vercel.app/">
 <meta property="og:title" content="Talum · Clínica Podológica en Portugalete">
 <meta property="og:description" content="Quiropodología, biomecánica deportiva y ecografía del pie en Repelega, Portugalete. Cuarta generación. Pide cita online.">
-<meta property="og:image" content="https://pruebatalum.netlify.app/assets/joel.jpg">
+<meta property="og:image" content="https://talumpodologia.vercel.app/assets/joel.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Talum Podología">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Talum · Clínica Podológica en Portugalete">
 <meta name="twitter:description" content="Quiropodología, biomecánica deportiva y ecografía del pie. Cuarta generación.">
-<meta name="twitter:image" content="https://pruebatalum.netlify.app/assets/joel.jpg">
+<meta name="twitter:image" content="https://talumpodologia.vercel.app/assets/joel.jpg">
 <meta name="twitter:image:alt" content="Joel Zubicaray, podólogo en Talum Clínica Podológica, Repelega Portugalete">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,10 +32,10 @@
 {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "@id": "https://pruebatalum.netlify.app/#clinica",
+  "@id": "https://talumpodologia.vercel.app/#clinica",
   "name": "Talum · Clínica Podológica",
-  "url": "https://pruebatalum.netlify.app/",
-  "image": "https://pruebatalum.netlify.app/assets/joel.jpg",
+  "url": "https://talumpodologia.vercel.app/",
+  "image": "https://talumpodologia.vercel.app/assets/joel.jpg",
   "description": "Clínica podológica en Repelega, Portugalete. Quiropodología, biomecánica deportiva y ecografía del pie. Cuarta generación.",
   "telephone": "+34681800118",
   "medicalSpecialty": "Podología",
@@ -129,6 +129,14 @@ body::-webkit-scrollbar { display: none; }
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--white); }
+.nav-links a.active { color: var(--white); }
+.nav-links a.active::after {
+  content: '';
+  position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 1.5px; background: var(--terra);
+  border-radius: 2px;
+}
+.nav-links a { position: relative; }
 .nav-cta {
   background: var(--terra);
   color: var(--white) !important;
@@ -1689,11 +1697,15 @@ img { max-width: 100%; height: auto; display: block; }
   transform: scale(1.1);
   filter: blur(4px);
   will-change: filter, transform;
+  /* Fallback visible si el vídeo no carga */
+  background: linear-gradient(160deg, #1a2d3d 0%, var(--slate) 45%, #2a3f4a 100%);
 }
 #hero-video {
   width: 100%; height: 100%;
   object-fit: cover; display: block;
 }
+/* Si el vídeo falla, mostrar gradiente estático sin el elemento roto */
+#hero-video:not([src]), #hero-video[src=""] { display: none; }
 #video-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to bottom, rgba(15,26,38,.5) 0%, rgba(15,26,38,.08) 40%, rgba(15,26,38,.65) 100%);
@@ -1761,7 +1773,7 @@ img { max-width: 100%; height: auto; display: block; }
     <p class="v-sub">No deberías acostumbrarte al dolor. Y no tienes que hacerlo. Si algo duele al caminar, normalmente hay una causa. Y en la mayoría de los casos, tiene solución.</p>
     <div class="v-btns">
       <a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="v-btn-primary">Pedir cita &rarr;</a>
-      <a href="https://wa.me/34681800118" target="_blank" rel="noopener noreferrer" class="v-btn-wa"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
+      <a href="https://wa.me/34681800118?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20y%20cita%20en%20Talum." target="_blank" rel="noopener noreferrer" class="v-btn-wa"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
     </div>
     <div class="scroll-hint"><span>Desplázate</span><div class="scroll-hint-line"></div></div>
   </div>
@@ -2154,7 +2166,7 @@ img { max-width: 100%; height: auto; display: block; }
         <div class="info-block reveal reveal-d2">
           <div class="info-block-label">Contacto</div>
           <div class="info-block-val">
-            <a href="https://wa.me/34681800118" target="_blank" rel="noopener noreferrer" style="color:var(--terra);text-decoration:none;font-weight:500;">WhatsApp →</a>
+            <a href="https://wa.me/34681800118?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20y%20cita%20en%20Talum." target="_blank" rel="noopener noreferrer" style="color:var(--terra);text-decoration:none;font-weight:500;">WhatsApp →</a>
             <small>También por teléfono</small>
           </div>
         </div>
@@ -2188,7 +2200,7 @@ img { max-width: 100%; height: auto; display: block; }
     <p class="cta-desc reveal reveal-d2">Consulta en Avenida Repelega 11, Portugalete.<br>Sin prisas. Sin tratamientos innecesarios.</p>
     <div class="cta-btns reveal reveal-d3">
       <a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="btn-terra">Pedir cita →</a>
-      <a href="https://wa.me/34681800118" target="_blank" rel="noopener noreferrer" class="btn-cta-wa">WhatsApp</a>
+      <a href="https://wa.me/34681800118?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20y%20cita%20en%20Talum." target="_blank" rel="noopener noreferrer" class="btn-cta-wa">WhatsApp</a>
       <a href="tel:+34681800118" class="btn-cta-call">Llamar</a>
     </div>
   </div>
@@ -2245,7 +2257,7 @@ img { max-width: 100%; height: auto; display: block; }
       <div class="footer-nav-label">Contacto</div>
       <ul class="footer-nav-list">
         <li><a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="cta-link">Pedir cita →</a></li>
-        <li><a href="https://wa.me/34681800118" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        <li><a href="https://wa.me/34681800118?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20y%20cita%20en%20Talum." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
         <li><a href="tel:+34681800118">+34 681 800 118</a></li>
         <li><a href="#ubicacion">Lunes – Viernes · 09:00–20:00</a></li>
       </ul>
@@ -2417,7 +2429,7 @@ img { max-width: 100%; height: auto; display: block; }
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
 
-<a href="https://wa.me/34681800118" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Contactar por WhatsApp" title="WhatsApp">
+<a href="https://wa.me/34681800118?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20y%20cita%20en%20Talum." target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Contactar por WhatsApp" title="WhatsApp">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span class="wa-float-label">WhatsApp</span>
 </a>
@@ -2440,6 +2452,25 @@ window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", windo
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
+/* ── NAV ACTIVO ── */
+(function () {
+  const links = document.querySelectorAll('.nav-links a[href^="#"]');
+  const sectionIds = ['servicios', 'equipo', 'primera-visita', 'faq', 'ubicacion'];
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id;
+      links.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+
+  sections.forEach(s => io.observe(s));
+})();
+
 /* ── PROGRESS BAR ── */
 (function () {
   const bar = document.getElementById("progress-bar");
@@ -2497,6 +2528,7 @@ window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", windo
   const idxEl    = document.getElementById("hs-idx");
   const fillEl   = document.getElementById("hs-progress-fill");
   const PANELS   = 6;
+  let rafId      = null;
 
   function hsUpdate() {
     const stickyTop = window.innerWidth <= 640 ? 68 : 0;
@@ -2511,9 +2543,19 @@ window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", windo
     idxEl.textContent = String(idx).padStart(2, "0");
     fillEl.style.width = (progress * 100).toFixed(2) + "%";
 
-    requestAnimationFrame(hsUpdate);
+    rafId = requestAnimationFrame(hsUpdate);
   }
-  hsUpdate();
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (!rafId) rafId = requestAnimationFrame(hsUpdate);
+      } else {
+        if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+      }
+    });
+  });
+  io.observe(section);
 })();
 
 /* ── FOOTER: ENLACES A PANEL DE SERVICIO ── */
