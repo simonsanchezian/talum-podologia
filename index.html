@@ -1,0 +1,2708 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talum · Clínica Podológica en Repelega, Portugalete</title>
+<meta name="description" content="Clínica podológica en Avenida Repelega 11, Portugalete. Quiropodología, biomecánica deportiva y ecografía del pie. Cuarta generación. Pide cita online.">
+<link rel="canonical" href="https://pruebatalum.netlify.app/">
+<link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/assets/favicon/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://pruebatalum.netlify.app/">
+<meta property="og:title" content="Talum · Clínica Podológica en Portugalete">
+<meta property="og:description" content="Quiropodología, biomecánica deportiva y ecografía del pie en Repelega, Portugalete. Cuarta generación. Pide cita online.">
+<meta property="og:image" content="https://pruebatalum.netlify.app/assets/joel.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Talum Podología">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Talum · Clínica Podológica en Portugalete">
+<meta name="twitter:description" content="Quiropodología, biomecánica deportiva y ecografía del pie. Cuarta generación.">
+<meta name="twitter:image" content="https://pruebatalum.netlify.app/assets/joel.jpg">
+<meta name="twitter:image:alt" content="Joel Zubicaray, podólogo en Talum Clínica Podológica, Repelega Portugalete">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "@id": "https://pruebatalum.netlify.app/#clinica",
+  "name": "Talum · Clínica Podológica",
+  "url": "https://pruebatalum.netlify.app/",
+  "image": "https://pruebatalum.netlify.app/assets/joel.jpg",
+  "description": "Clínica podológica en Repelega, Portugalete. Quiropodología, biomecánica deportiva y ecografía del pie. Cuarta generación.",
+  "telephone": "+34681800118",
+  "medicalSpecialty": "Podología",
+  "openingHours": "Mo-Fr 09:00-20:00",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Repelega 11",
+    "addressLocality": "Portugalete",
+    "addressRegion": "Bizkaia",
+    "postalCode": "48920",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.3202,
+    "longitude": -3.0177
+  },
+  "sameAs": [
+    "https://wa.me/34681800118"
+  ]
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --slate:   #3F4E4F;
+  --slate-m: #4E6162;
+  --night:   #2C3639;
+  --terra:   #A27B5C;
+  --terra-l: #C49A7A;
+  --sand:    #DCD7C9;
+  --sand-d:  #C8C3B5;
+  --off:     #EDEBE4;
+  --white:   #FAFAF7;
+  --ink:     #2C3639;
+  --muted:   #7B8B8C;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Outfit', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; scrollbar-width: none; overflow-x: clip; }
+html::-webkit-scrollbar { display: none; }
+
+
+body {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.75;
+  background: var(--off);
+  color: var(--ink);
+  overflow-x: clip;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar { display: none; }
+
+/* ── NAV ── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  padding: 0 6vw;
+  height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(44,54,57,0.97);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: box-shadow 0.3s;
+}
+.nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.25); }
+
+.nav-logo {
+  display: flex; align-items: baseline; gap: 0.5rem;
+  text-decoration: none;
+}
+.nav-logo-main {
+  font-family: var(--serif);
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--white); letter-spacing: -0.01em;
+}
+.nav-logo-sub {
+  display: none;
+}
+
+.nav-links {
+  display: flex; align-items: center; gap: 2rem; list-style: none;
+}
+.nav-links a {
+  font-size: 0.82rem; font-weight: 400;
+  color: rgba(255,255,255,0.6); text-decoration: none;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  background: var(--terra);
+  color: var(--white) !important;
+  padding: 0.55rem 1.4rem;
+  border-radius: 4px;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--slate) !important; }
+.nav-tel { color: var(--terra-l) !important; font-weight: 500 !important; letter-spacing: 0.02em !important; }
+
+/* ── NAV MÓVIL ── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 8px 4px;
+  z-index: 201;
+}
+.nav-burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 2px;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+  transform-origin: center;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-mobile {
+  position: fixed;
+  top: 68px;
+  left: 0; right: 0;
+  background: rgba(44,54,57,0.98);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 0.5rem 6vw 1.8rem;
+  z-index: 198;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+  pointer-events: none;
+}
+.nav-mobile.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+.nav-mobile ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.nav-mobile ul li a {
+  display: block;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.95rem; font-weight: 400; letter-spacing: 0.03em;
+  transition: color 0.15s;
+}
+.nav-mobile ul li:last-child a { border-bottom: none; }
+.nav-mobile ul li a:hover { color: var(--white); }
+.nav-mobile .mobile-cta {
+  display: inline-block;
+  background: var(--terra);
+  color: var(--white);
+  padding: 0.75rem 1.8rem;
+  border-radius: 4px;
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 500; letter-spacing: 0.06em; font-size: 0.82rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.nav-mobile .mobile-cta:hover { background: var(--slate); }
+
+/* ── HERO ── */
+.hero {
+  padding: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  background: var(--off);
+  position: relative;
+}
+
+.hero-left {
+  padding: 6rem 4vw 6rem 6vw;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 32px; height: 2px;
+  background: var(--terra);
+}
+.hero-eyebrow span {
+  font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--terra);
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-weight: 700; line-height: 1.05;
+  color: var(--slate); margin-bottom: 1.8rem;
+  letter-spacing: -0.02em;
+}
+.hero h1 em { font-style: italic; color: var(--terra); }
+
+.hero-desc {
+  font-size: 1.15rem; line-height: 1.85;
+  color: var(--muted); max-width: 440px;
+  margin-bottom: 3rem;
+}
+
+.hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+
+.btn-fill {
+  display: inline-block;
+  background: var(--slate); color: var(--white);
+  padding: 0.9rem 2.2rem; border-radius: 4px;
+  font-size: 0.9rem; font-weight: 500;
+  text-decoration: none; letter-spacing: 0.03em;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-fill:hover { background: var(--terra); transform: translateY(-2px); }
+
+.btn-hero-wa {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  background: transparent; color: var(--slate);
+  padding: 0.9rem 1.5rem; border-radius: 4px;
+  font-size: 0.9rem; font-weight: 400;
+  text-decoration: none;
+  border: 1px solid rgba(27,42,59,0.2);
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-hero-wa:hover { border-color: var(--terra); color: var(--terra); }
+
+.btn-hero-call {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: transparent; color: var(--slate);
+  padding: 0.9rem 1.5rem; border-radius: 4px;
+  font-size: 0.9rem; font-weight: 400;
+  text-decoration: none;
+  border: 1px solid rgba(27,42,59,0.2);
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.btn-hero-call:hover { border-color: var(--slate); background: var(--slate); color: var(--white); }
+
+/* ── ICONO TELÉFONO MÓVIL (HEADER) ── */
+.nav-right-group {
+  display: none;
+  align-items: center; gap: 0.15rem;
+}
+.nav-tel-icon {
+  display: flex;
+  align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  color: var(--terra-l);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-tel-icon:hover { color: var(--white); }
+.nav-tel-icon svg { width: 18px; height: 18px; }
+@media (max-width: 768px) { .nav-right-group { display: flex; } }
+
+/* ── BOTÓN SUBIR ARRIBA ── */
+.scroll-top {
+  position: fixed;
+  bottom: 96px; right: 28px;
+  z-index: 9998;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--slate);
+  border: none; cursor: pointer;
+  color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.28);
+  opacity: 0;
+  transform: scale(0.6) translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.22,1,0.36,1),
+              transform 0.35s cubic-bezier(0.22,1,0.36,1),
+              background 0.2s, box-shadow 0.2s;
+  animation: waPop 0.4s 1.4s ease both;
+}
+.scroll-top.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+.scroll-top:hover { background: var(--slate-m); box-shadow: 0 6px 24px rgba(0,0,0,0.38); }
+.scroll-top svg { width: 20px; height: 20px; }
+@media (hover: none) { .scroll-top { width: 56px; border-radius: 50%; } }
+
+/* ── BOTÓN FLOTANTE WHATSAPP ── */
+.wa-float {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  z-index: 9999;
+  display: flex; align-items: center; gap: 0;
+  background: #25D366;
+  color: var(--white);
+  width: 56px; height: 56px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.88rem; font-weight: 500;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  transition: width 0.35s cubic-bezier(0.16,1,0.3,1),
+              border-radius 0.35s cubic-bezier(0.16,1,0.3,1),
+              box-shadow 0.2s;
+  animation: waPop 0.4s 1s ease both;
+}
+.wa-float:hover {
+  width: 148px;
+  border-radius: 28px;
+  box-shadow: 0 8px 28px rgba(37,211,102,0.55);
+}
+.wa-float svg {
+  flex-shrink: 0;
+  width: 56px; height: 56px;
+  padding: 14px;
+}
+.wa-float-label {
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  padding-right: 0;
+  transition: max-width 0.35s cubic-bezier(0.16,1,0.3,1),
+              opacity 0.25s 0.1s ease,
+              padding-right 0.35s;
+}
+.wa-float:hover .wa-float-label {
+  max-width: 100px;
+  opacity: 1;
+  padding-right: 1.1rem;
+}
+@keyframes waPop {
+  from { opacity: 0; transform: scale(0.7) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+
+/* ── BIG TEXT MODE ── */
+body.big-text .hero-desc,
+body.big-text .sec-lead          { font-size: 1.38rem; }
+body.big-text .pc-a,
+body.big-text .service-desc,
+body.big-text .comp-desc,
+body.big-text .step-text,
+body.big-text .promise-item,
+body.big-text .faq-answer,
+body.big-text .domicilio-left p,
+body.big-text .team-bio          { font-size: 1.22rem; }
+body.big-text .family-text       { font-size: 1.28rem; }
+body.big-text .faq-summary       { font-size: 1.12rem; }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  color: var(--slate); text-decoration: none;
+  font-size: 0.88rem; font-weight: 400;
+  border-bottom: 1px solid var(--sand-d);
+  padding-bottom: 2px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-ghost:hover { color: var(--terra); border-color: var(--terra); }
+
+.hero-right {
+  background: var(--slate);
+  position: relative;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 3rem 5vw 4rem 6vw;
+
+  clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
+}
+
+.hero-right::before { content: none; }
+.hero-right::after { content: none; }
+
+.hero-deco-svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 0; pointer-events: none;
+}
+
+.hero-service-label,
+.hero-service-cards,
+.hero-trust-strip { position: relative; z-index: 1; }
+
+.hero-service-label {
+  font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1rem;
+}
+
+.hero-service-cards { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 0.75rem; }
+
+.hero-service-card {
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  display: flex; align-items: flex-start; gap: 0.85rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.2s;
+}
+.hero-service-card:hover { background: rgba(255,255,255,0.09); }
+
+.hero-service-icon {
+  width: 30px; height: 30px; border-radius: 6px;
+  background: rgba(200,100,74,0.18);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.hero-service-icon svg { width: 15px; height: 15px; }
+
+.hero-service-title { font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.92); margin-bottom: 0.2rem; }
+.hero-service-desc { font-size: 0.75rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+.hero-trust-strip {
+  background: rgba(255,255,255,0.07);
+  border-radius: 8px; padding: 0.85rem 1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.hero-trust-strong { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.9); }
+.hero-trust-sub { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 0.2rem; }
+
+.hero-social-proof {
+  display: flex; align-items: center; gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(27,42,59,0.1);
+}
+.proof-item { display: flex; flex-direction: column; }
+.proof-num { font-size: 1.4rem; font-weight: 500; color: var(--slate); line-height: 1; }
+.proof-label { font-size: 0.68rem; color: var(--muted); margin-top: 0.2rem; }
+.proof-divider { width: 1px; height: 36px; background: rgba(27,42,59,0.12); }
+
+.btn-hero-wa-green {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  background: #25D366; color: var(--white);
+  padding: 0.9rem 1.5rem; border-radius: 4px;
+  font-size: 0.9rem; font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-hero-wa-green:hover { background: #1da851; transform: translateY(-2px); }
+
+/* ── STRIP QUOTE ── */
+.strip {
+  background: var(--terra);
+  padding: 2.5rem 6vw;
+  overflow: hidden; position: relative;
+}
+.strip::before {
+  content: '"';
+  font-family: var(--serif);
+  font-size: 20rem; line-height: 0.7;
+  color: rgba(255,255,255,0.06);
+  position: absolute; top: 0; left: 4vw;
+  font-weight: 700;
+}
+.strip-inner {
+  max-width: 800px; position: relative; z-index: 1;
+}
+.strip-quote {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  font-style: italic; line-height: 1.45;
+  color: var(--white);
+  margin-bottom: 1.2rem;
+}
+.strip-attr {
+  font-size: 0.78rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(255,255,255,0.6);
+}
+
+/* ── SECTION BASE ── */
+.sec { padding: 4rem 6vw; }
+.sec-alt { background: var(--sand); }
+.sec-dark { background: var(--slate); }
+.sec-off { background: var(--off); }
+
+.eyebrow {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 1rem;
+}
+.eyebrow::before { content: ''; width: 20px; height: 1.5px; background: var(--terra); }
+
+.sec-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; line-height: 1.1;
+  color: var(--slate); margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+.sec-title em { font-style: italic; color: var(--terra); }
+.sec-title.on-dark { color: var(--white); }
+.sec-title.on-dark em { color: var(--terra-l); }
+
+.sec-lead {
+  font-size: 1.15rem; color: var(--muted);
+  line-height: 1.85; max-width: 560px;
+  margin-bottom: 2rem;
+}
+.sec-lead.on-dark { color: rgba(255,255,255,0.55); }
+
+/* ── PROBLEMAS ── */
+#problemas { background: var(--sand); }
+
+.problem-cat {
+  display: inline-flex; align-items: center;
+  background: var(--terra); color: var(--white);
+  padding: 0.4rem 1.3rem; border-radius: 100px;
+  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em;
+  text-transform: uppercase; margin: 1.5rem 0 1rem;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+@media (max-width: 1024px) and (min-width: 641px) {
+  .problem-grid { grid-template-columns: repeat(2, 1fr); }
+  .problem-grid > :last-child { grid-column: 1 / -1; }
+}
+
+.problem-card {
+  border-radius: 22px;
+  padding: 2.4rem 2.2rem;
+  display: flex; flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.problem-card:hover {
+  transform: translateY(-5px);
+}
+.problem-card.reveal {
+  transform: translateY(50px) scale(0.93);
+  filter: blur(3px);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.problem-card.reveal.in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0px);
+}
+#problemas .reveal-d1 { transition-delay: 0.1s; }
+#problemas .reveal-d2 { transition-delay: 0.22s; }
+#problemas .reveal-d3 { transition-delay: 0.34s; }
+
+/* ── ANIMACIONES POR TIPO DE ELEMENTO ── */
+
+/* Compromisos — el grid entra como bloque, las celdas hacen fade escalonado */
+.compromisos-grid.reveal {
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.compromisos-grid.reveal.in { opacity: 1; transform: translateY(0); }
+.compromiso.reveal {
+  transform: none;
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.compromiso.reveal.in { opacity: 1; }
+
+/* Steps — desliza desde la izquierda */
+.step.reveal {
+  transform: translateX(-32px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.step.reveal.in { opacity: 1; transform: translateX(0); }
+
+/* Promise items — desliza suave desde la izquierda */
+.promise-item.reveal {
+  transform: translateX(-20px);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.promise-item.reveal.in { opacity: 1; transform: translateX(0); }
+
+/* Visit promise — bloque derecho */
+.visit-promise.reveal {
+  transform: translateX(28px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.visit-promise.reveal.in { opacity: 1; transform: translateX(0); }
+
+/* Info blocks — slide up compacto */
+.info-block.reveal {
+  transform: translateY(24px);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.info-block.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* Mapa — escala muy suave */
+.map-wrap.reveal {
+  transform: scale(0.97) translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.map-wrap.reveal.in { opacity: 1; transform: scale(1) translateY(0); }
+
+/* CTA — fade suave desde abajo */
+.cta-title.reveal, .cta-desc.reveal, .cta-btns.reveal {
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Team cards — escala + elevación */
+.team-card.reveal {
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.team-card.reveal.in { opacity: 1; transform: translateY(0) scale(1); }
+
+/* FAQ items — escalonado rápido */
+.faq-details.reveal {
+  transform: translateY(18px);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-details.reveal.in { opacity: 1; transform: translateY(0); }
+
+.problem-card.dark { background: var(--night); box-shadow: 0 4px 32px rgba(15,26,38,0.35); }
+.problem-card.dark:hover { box-shadow: 0 16px 48px rgba(15,26,38,0.45); }
+.problem-card.light { background: var(--off); box-shadow: 0 2px 20px rgba(27,42,59,0.09); }
+.problem-card.light:hover { box-shadow: 0 14px 40px rgba(27,42,59,0.14); }
+
+.problem-card::after {
+  content: attr(data-n);
+  position: absolute; right: 1.4rem; top: 0.6rem;
+  font-family: var(--serif); font-size: 6rem; font-weight: 700;
+  line-height: 1; pointer-events: none; user-select: none;
+}
+.problem-card { position: relative; overflow: hidden; }
+.problem-card.dark::after  { color: rgba(255,255,255,0.04); }
+.problem-card.light::after { color: rgba(27,42,59,0.04); }
+
+.pc-q {
+  font-family: var(--serif); font-style: italic;
+  font-size: 1.08rem; line-height: 1.6;
+  flex: 1; margin-bottom: 1.5rem; padding-bottom: 1.5rem;
+}
+.problem-card.dark  .pc-q { color: var(--white);  border-bottom: 1px solid rgba(200,100,74,0.25); }
+.problem-card.light .pc-q { color: var(--slate);  border-bottom: 1px solid rgba(27,42,59,0.1); }
+
+.pc-label {
+  display: block; font-size: 0.63rem; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 500; margin-bottom: 0.5rem;
+}
+.problem-card.dark  .pc-label { color: var(--terra-l); }
+.problem-card.light .pc-label { color: var(--terra); }
+
+.pc-a { font-size: 1rem; line-height: 1.8; }
+.problem-card.dark  .pc-a { color: rgba(242,237,228,0.6); }
+.problem-card.light .pc-a { color: var(--muted); }
+
+@media (max-width: 768px) {
+  .problem-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; border-left: none; border-top: none; }
+  .service-item { border-left: none; border-right: none; border-top: 1px solid rgba(255,255,255,0.07); border-bottom: none; }
+}
+
+
+/* ── SERVICIOS ── */
+#servicios { background: var(--slate); }
+#servicios .eyebrow { color: var(--terra-l); }
+#servicios .sec-title { color: var(--white); }
+#servicios .sec-title em { color: var(--terra-l); }
+#servicios .sec-lead { color: rgba(242,237,228,0.55); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  border-left: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.service-item {
+  background: transparent;
+  border-radius: 0;
+  padding: 2.6rem 2.4rem;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
+  gap: 1rem;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: background 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+.service-item:hover { background: rgba(255,255,255,0.025); }
+.service-item::before { content: none; }
+.service-item::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(162, 123, 92, 0.28) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+.service-item:hover::after { opacity: 1; }
+.service-item > * { position: relative; z-index: 1; }
+
+.service-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.2rem; height: 2.2rem; border-radius: 6px;
+  background: rgba(162, 123, 92, 0.2);
+  border: 1px solid rgba(162, 123, 92, 0.3);
+  color: var(--terra-l);
+  font-family: var(--sans); font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.service-name {
+  font-size: 1rem; font-weight: 500;
+  color: rgba(255,255,255,0.88); line-height: 1.35;
+}
+.service-desc { font-size: 1rem; color: rgba(255,255,255,0.38); line-height: 1.85; flex: 1; }
+.service-arrow { display: none; }
+
+/* ── DOMICILIO ── */
+.domicilio-banner {
+  background: var(--sand);
+  border: 1px solid rgba(27,42,59,0.08);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap;
+  gap: 1.5rem; margin-top: 1.5rem;
+}
+.domicilio-left strong {
+  display: block; font-size: 1rem; font-weight: 500;
+  color: var(--slate); margin-bottom: 0.3rem;
+}
+.domicilio-left p { font-size: 1rem; color: var(--muted); }
+.domicilio-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag {
+  background: var(--off);
+  border: 1px solid rgba(27,42,59,0.1);
+  padding: 0.3rem 0.8rem; border-radius: 20px;
+  font-size: 0.75rem; color: var(--muted);
+}
+
+/* ── COMPROMISOS ── */
+#compromisos { background: var(--slate); }
+.compromisos-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px; background: rgba(255,255,255,0.07);
+  border-radius: 12px; overflow: hidden;
+  margin-top: 2rem;
+}
+.compromiso {
+  background: var(--slate);
+  padding: 2.2rem 2rem;
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+.compromiso:hover { background: var(--slate-m); }
+.compromiso-topo {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  -webkit-mask-image: radial-gradient(circle 150px at var(--mx, 50%) var(--my, 50%), black 0%, rgba(0,0,0,0.6) 45%, transparent 100%);
+  mask-image: radial-gradient(circle 150px at var(--mx, 50%) var(--my, 50%), black 0%, rgba(0,0,0,0.6) 45%, transparent 100%);
+}
+.compromiso:hover .compromiso-topo { opacity: 1; }
+.compromiso.topo-active .compromiso-topo { opacity: 1; }
+@media (hover: none) {
+  .compromiso:hover .compromiso-topo { opacity: 0; }
+}
+.comp-num {
+  font-family: var(--serif);
+  font-size: 2.8rem; font-weight: 700;
+  color: var(--terra); opacity: 0.4;
+  line-height: 1; margin-bottom: 1rem;
+  transition: opacity 0.2s;
+}
+.compromiso:hover .comp-num { opacity: 0.7; }
+.comp-title {
+  font-size: 0.9rem; font-weight: 500;
+  color: var(--white); margin-bottom: 0.6rem; line-height: 1.45;
+}
+.comp-desc { font-size: 1rem; color: rgba(255,255,255,0.4); line-height: 1.75; }
+
+/* ── QUIÉNES SOMOS ── */
+#equipo { background: var(--sand); }
+.team-layout {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: start;
+}
+.team-header { grid-column: span 2; margin-bottom: 0.5rem; }
+
+.team-card {
+  background: var(--sand-d);
+  border-radius: 12px;
+  border: 1px solid rgba(27,42,59,0.1);
+  position: relative; overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0;
+}
+.team-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--terra);
+  z-index: 1;
+}
+.team-card-content {
+  padding: 2.5rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.team-initial {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--sand);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1.4rem;
+  font-weight: 700; color: var(--slate);
+  margin-bottom: 1.2rem;
+}
+.team-photo {
+  width: 220px;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-left: 1px solid rgba(27,42,59,0.06);
+  filter: contrast(1.03) brightness(0.92);
+  transform: scale(1);
+  transform-origin: center center;
+  transition: filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, filter;
+}
+.team-card:hover .team-photo {
+  filter: contrast(1.05) brightness(1.04);
+  transform: scale(1.05);
+}
+.team-card-content .team-name {
+  font-family: var(--serif); font-size: 1.5rem;
+  font-weight: 700; color: var(--slate);
+  margin-bottom: 0.2rem; letter-spacing: -0.01em;
+}
+.team-card-content .team-role {
+  font-size: 0.72rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--terra);
+  font-weight: 500; display: block; margin-bottom: 1.5rem;
+}
+.team-card-content .team-bio {
+  font-size: 1rem; color: var(--muted);
+  line-height: 1.85;
+}
+.team-card-content .team-bio + .team-bio { margin-top: 0.8rem; }
+.team-name {
+  font-family: var(--serif); font-size: 1.5rem;
+  font-weight: 700; color: var(--slate);
+  margin-bottom: 0.2rem; letter-spacing: -0.01em;
+}
+.team-role {
+  font-size: 0.72rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--terra);
+  font-weight: 500; display: block; margin-bottom: 1.5rem;
+}
+.team-bio {
+  font-size: 1rem; color: var(--muted);
+  line-height: 1.85;
+}
+.team-bio + .team-bio { margin-top: 0.8rem; }
+
+.family-block {
+  grid-column: span 2;
+  background: var(--slate);
+  border-radius: 12px;
+  padding: 3rem;
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 3rem; align-items: start;
+  margin-top: 1rem;
+}
+.family-years {
+  font-family: var(--serif);
+  font-size: 5rem; font-weight: 700;
+  color: var(--terra); line-height: 1;
+  letter-spacing: -0.03em;
+}
+.family-years span { display: block; font-size: 0.9rem; font-weight: 400; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; text-transform: uppercase; margin-top: 0.3rem; }
+.family-text { font-size: 1.05rem; color: rgba(255,255,255,0.55); line-height: 1.9; }
+.family-text strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+/* ── PRIMERA VISITA ── */
+#primera-visita { background: var(--sand); }
+.visit-layout {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: center;
+}
+.steps { display: flex; flex-direction: column; gap: 0; margin-top: 2rem; }
+.step {
+  display: grid; grid-template-columns: 48px 1fr;
+  gap: 1.5rem; padding: 1.8rem 0;
+  border-top: 1px solid rgba(27,42,59,0.07);
+  align-items: start;
+}
+.step:last-child { border-bottom: 1px solid rgba(27,42,59,0.07); }
+.step-num {
+  width: 48px; height: 48px;
+  border: 1.5px solid rgba(27,42,59,0.12);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 1.1rem;
+  font-weight: 700; color: var(--slate);
+  flex-shrink: 0;
+}
+.step-title { font-size: 0.95rem; font-weight: 500; color: var(--slate); margin-bottom: 0.4rem; }
+.step-text { font-size: 1rem; color: var(--muted); line-height: 1.8; }
+
+.visit-promise {
+  background: var(--slate);
+  border-radius: 12px;
+  margin-top: 2rem;
+  padding: 2.5rem;
+  color: var(--white);
+}
+.visit-promise h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem; font-weight: 700;
+  line-height: 1.25; margin-bottom: 1.8rem;
+  color: var(--white);
+}
+.visit-promise h3 em { font-style: italic; color: var(--terra-l); }
+.promise-list { display: flex; flex-direction: column; gap: 0; }
+.promise-item {
+  display: flex; gap: 1rem; align-items: flex-start;
+  padding: 1.1rem 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 1rem; color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+}
+.promise-item:first-child { border-top: none; }
+.promise-item::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--terra); margin-top: 7px; flex-shrink: 0;
+}
+
+/* ── FAQ ACORDEÓN ── */
+#faq { background: var(--slate); }
+#faq .eyebrow { color: var(--terra-l); }
+#faq .sec-title { color: var(--white); }
+#faq .sec-title em { color: var(--terra-l); }
+.faq-hint {
+  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.28); margin-bottom: 0.6rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.faq-hint::before {
+  content: '';
+  display: inline-block; width: 14px; height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='rgba(255,255,255,0.28)' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M15 15l-6-6m0 0l6-6m-6 6h12'/%3E%3C/svg%3E");
+  background-size: contain; background-repeat: no-repeat;
+}
+.faq-list { margin-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.07); }
+.faq-details {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.faq-details:not([open]):hover { background: rgba(255,255,255,0.04); }
+.faq-summary {
+  list-style: none;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; padding: 1.4rem 1rem;
+  cursor: pointer; user-select: none;
+  font-size: 0.95rem; font-weight: 500;
+  color: rgba(255,255,255,0.85); line-height: 1.45;
+  border-radius: 4px;
+}
+.faq-summary::-webkit-details-marker { display: none; }
+.faq-summary::after {
+  content: '';
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C49A7A' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-size: contain; background-repeat: no-repeat;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.faq-details[open] .faq-summary::after { transform: rotate(180deg); }
+.faq-details[open] .faq-summary { color: var(--terra-l); }
+.faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.faq-details[open] .faq-body { grid-template-rows: 1fr; }
+.faq-body-inner { overflow: hidden; }
+.faq-answer {
+  font-size: 1rem; color: rgba(255,255,255,0.42);
+  line-height: 1.85; max-width: 680px;
+  padding-bottom: 1.5rem;
+}
+
+/* ── FILOSOFÍA DEL DOLOR ── */
+.talum-philo { background: var(--off); }
+.talum-philo__head { margin-bottom: 3.5rem; }
+.talum-philo__split {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 0; align-items: stretch;
+}
+.talum-philo__card {
+  padding: 3rem 2.8rem;
+  display: flex; flex-direction: column; gap: 1.2rem;
+}
+.talum-philo__card--left {
+  background: var(--sand);
+  border: 1px solid rgba(27,42,59,0.08);
+  border-right: none;
+  border-radius: 12px 0 0 12px;
+}
+.talum-philo__card--right {
+  background: var(--slate);
+  border-radius: 0 12px 12px 0;
+}
+.talum-philo__tag {
+  font-size: 0.65rem; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--muted);
+}
+.talum-philo__tag--accent { color: var(--terra-l); }
+.talum-philo__card h3 {
+  font-family: var(--serif); font-size: 1.6rem;
+  font-weight: 700; letter-spacing: -0.01em;
+  color: var(--slate); line-height: 1.1;
+}
+.talum-philo__card--right h3 { color: var(--white); }
+.talum-philo__verb {
+  font-family: var(--serif); font-style: italic;
+  font-size: 1.2rem; color: var(--muted); margin: 0;
+}
+.talum-philo__verb--accent { color: var(--terra-l); }
+.talum-philo__body {
+  font-size: 0.9rem; line-height: 1.85; color: var(--muted);
+}
+.talum-philo__card--right .talum-philo__body { color: rgba(255,255,255,0.5); }
+.talum-philo__list {
+  list-style: none; padding: 0; margin: auto 0 0;
+  display: flex; flex-direction: column; gap: 0.65rem;
+}
+.talum-philo__list li {
+  position: relative; padding-left: 1.3rem;
+  font-size: 0.84rem; color: var(--muted);
+}
+.talum-philo__card--right .talum-philo__list li { color: rgba(255,255,255,0.38); }
+.talum-philo__list li::before {
+  content: "—"; position: absolute; left: 0; color: var(--terra);
+}
+.talum-philo__card--right .talum-philo__list li::before { color: var(--terra-l); }
+.talum-philo__divider {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--sand);
+  border-top: 1px solid rgba(27,42,59,0.08);
+  border-bottom: 1px solid rgba(27,42,59,0.08);
+  position: relative;
+}
+.talum-philo__divider-label {
+  font-family: var(--serif); font-style: italic;
+  font-size: 1.4rem; color: var(--muted);
+}
+.talum-philo__closing {
+  margin-top: 3rem;
+  font-size: 1rem; font-style: italic;
+  color: var(--muted); line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .talum-philo__split { grid-template-columns: 1fr; }
+  .talum-philo__card--left { border-right: 1px solid rgba(27,42,59,0.08); border-bottom: none; border-radius: 12px 12px 0 0; }
+  .talum-philo__card--right { border-radius: 0 0 12px 12px; }
+  .talum-philo__divider { height: 60px; border-left: 1px solid rgba(27,42,59,0.08); border-right: none; border-top: none; }
+}
+
+/* ── MARQUEE TALUM ── */
+.talum-marquee {
+  background: var(--night);
+  padding: 2.2rem 0; overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.talum-marquee__track {
+  display: flex; align-items: baseline; gap: 2.5rem;
+  white-space: nowrap; width: max-content;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.15);
+  animation: talumScroll 38s linear infinite !important;
+  animation-play-state: running !important;
+}
+.talum-marquee__track em { font-style: italic; color: var(--terra); }
+.talum-marquee__dot {
+  color: var(--terra); font-style: normal;
+  font-size: 0.6em; vertical-align: middle;
+}
+@keyframes talumScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── UBICACIÓN ── */
+#ubicacion { background: var(--sand); }
+.ubicacion-layout {
+  display: grid; grid-template-columns: 1fr 2fr;
+  gap: 4rem; align-items: center;
+}
+.info-blocks { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+.info-block {
+  padding: 1.4rem 1.6rem;
+  background: var(--sand-d);
+  border-radius: 10px;
+  border-left: 3px solid var(--terra);
+}
+.info-block-label {
+  font-size: 0.68rem; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--terra); margin-bottom: 0.4rem;
+}
+.info-block-val {
+  font-size: 0.95rem; font-weight: 500; color: var(--slate);
+}
+.info-block-val small { display: block; font-size: 0.82rem; font-weight: 300; color: var(--muted); margin-top: 0.15rem; }
+
+.map-wrap {
+  border-radius: 16px; overflow: hidden;
+  height: clamp(280px, 50vw, 460px);
+  border: 1px solid rgba(27,42,59,0.08);
+  box-shadow: 0 8px 40px rgba(27,42,59,0.07);
+}
+.map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+
+/* ── CTA ── */
+.cta-section {
+  background: var(--night);
+  padding: 5rem 6vw;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,100,74,0.18) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: ctaBreathe 5s ease-in-out infinite;
+}
+@keyframes ctaBreathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 1; }
+  50%       { transform: translate(-50%, -50%) scale(1.22); opacity: 0.55; }
+}
+.cta-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+.cta-inner .eyebrow { justify-content: center; }
+.cta-inner .eyebrow::before { background: var(--terra-l); }
+.cta-title {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 700; line-height: 1.1;
+  color: var(--white); margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+.cta-title em { font-style: italic; color: var(--terra-l); }
+.cta-desc {
+  font-size: 1rem; color: rgba(255,255,255,0.5);
+  line-height: 1.8; margin-bottom: 3rem;
+}
+.cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-terra {
+  display: inline-block;
+  background: var(--terra); color: var(--white);
+  padding: 1rem 2.4rem; border-radius: 4px;
+  font-size: 0.95rem; font-weight: 500;
+  text-decoration: none; letter-spacing: 0.03em;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-terra:hover { background: var(--terra-l); transform: translateY(-2px); }
+.btn-outline-white {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.7);
+  padding: 1rem 2.2rem; border-radius: 4px;
+  font-size: 0.95rem; font-weight: 300;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline-white:hover { border-color: rgba(255,255,255,0.55); color: var(--white); }
+.btn-cta-wa {
+  display: inline-block;
+  background: #25D366; color: var(--white);
+  padding: 1rem 2.2rem; border-radius: 4px;
+  font-size: 0.95rem; font-weight: 500;
+  text-decoration: none; letter-spacing: 0.03em;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-cta-wa:hover { background: #1da851; transform: translateY(-2px); }
+.btn-cta-call {
+  display: inline-block;
+  background: #3B82F6; color: var(--white);
+  padding: 1rem 2.2rem; border-radius: 4px;
+  font-size: 0.95rem; font-weight: 500;
+  text-decoration: none; letter-spacing: 0.03em;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-cta-call:hover { background: #2563EB; transform: translateY(-2px); }
+
+/* ── FOOTER RICO ── */
+footer {
+  background: #0e1214;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-main {
+  padding: 4.5rem 6vw 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.footer-brand-col {}
+.footer-brand-logo {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.footer-brand-icon {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--terra);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.footer-brand-icon svg { width: 18px; height: 18px; }
+.footer-brand-name {
+  font-family: var(--serif); font-size: 1.05rem;
+  font-weight: 700; color: rgba(255,255,255,0.85);
+  letter-spacing: -0.01em; line-height: 1.2;
+  text-decoration: none;
+}
+.footer-brand-name small {
+  display: block; font-family: var(--sans);
+  font-size: 0.68rem; font-weight: 400;
+  color: rgba(255,255,255,0.3); letter-spacing: 0.04em;
+  text-transform: uppercase; margin-top: 1px;
+}
+.footer-tagline {
+  font-size: 0.82rem; color: rgba(255,255,255,0.3);
+  line-height: 1.7; max-width: 220px;
+}
+.footer-nav-col {}
+.footer-nav-label {
+  font-size: 0.64rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.25); margin-bottom: 1.2rem;
+}
+.footer-nav-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+.footer-nav-list a {
+  font-size: 0.88rem; color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-nav-list a:hover { color: rgba(255,255,255,0.9); }
+.footer-nav-list a.cta-link {
+  color: var(--terra-l);
+}
+.footer-nav-list a.cta-link:hover { color: var(--terra); }
+
+.footer-bottom {
+  padding: 1.4rem 6vw;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;
+}
+.footer-copy {
+  font-size: 0.72rem; color: rgba(255,255,255,0.2);
+  line-height: 1.6;
+}
+.footer-legal-links {
+  display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;
+}
+.legal-link {
+  background: none; border: none; cursor: pointer;
+  font-size: 0.72rem; color: rgba(255,255,255,0.25);
+  font-family: var(--sans); padding: 0;
+  transition: color 0.2s;
+}
+.legal-link:hover { color: var(--terra-l); }
+.footer-sep { color: rgba(255,255,255,0.12); font-size: 0.72rem; }
+
+@media (max-width: 960px) {
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 600px) {
+  .footer-main { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 6vw 2.5rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── MODALES LEGALES ── */
+.legal-modal {
+  display: none;
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(10,18,28,.72);
+  backdrop-filter: blur(6px);
+  align-items: flex-start; justify-content: center;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+.legal-modal.open { display: flex; }
+.legal-modal-box {
+  background: var(--sand);
+  border-radius: 14px;
+  padding: 3rem 3.5rem;
+  max-width: 760px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  animation: modalIn .25s cubic-bezier(.215,.61,.355,1) both;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.legal-modal-close {
+  position: absolute; top: 1.2rem; right: 1.4rem;
+  background: none; border: none; cursor: pointer;
+  font-size: 1.1rem; color: var(--muted);
+  line-height: 1; padding: .3rem .5rem; border-radius: 4px;
+  transition: color .2s, background .2s;
+}
+.legal-modal-close:hover { color: var(--slate); background: var(--sand); }
+.legal-modal-box h2 {
+  font-family: var(--serif); font-size: 1.8rem;
+  color: var(--slate); margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--terra);
+}
+.legal-modal-box h3 {
+  font-family: var(--sans); font-size: .88rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--terra); margin: 2rem 0 .7rem;
+}
+.legal-modal-box p { font-size: .9rem; color: var(--muted); line-height: 1.85; margin-bottom: .8rem; }
+.legal-modal-box ul { padding-left: 1.4rem; margin-bottom: .8rem; }
+.legal-modal-box ul li { font-size: .9rem; color: var(--muted); line-height: 1.8; margin-bottom: .3rem; }
+.legal-modal-box a { color: var(--terra); }
+.legal-modal-box a:hover { text-decoration: underline; }
+.legal-table {
+  width: 100%; border-collapse: collapse;
+  margin: .8rem 0 1.2rem; font-size: .83rem;
+}
+.legal-table th {
+  background: var(--slate); color: var(--white);
+  padding: .6rem 1rem; text-align: left; font-weight: 500;
+}
+.legal-table td {
+  padding: .6rem 1rem; color: var(--muted);
+  border-bottom: 1px solid var(--sand-d);
+}
+.legal-table tr:last-child td { border-bottom: none; }
+.legal-table tr:nth-child(even) td { background: var(--off); }
+@media (max-width: 640px) {
+  .legal-modal-box { padding: 2rem 1.5rem; }
+}
+
+/* ── BANNER COOKIES ── */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 8000;
+  background: var(--night);
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 1.2rem 4vw;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; flex-wrap: wrap;
+  animation: slideUp .35s cubic-bezier(.215,.61,.355,1) both;
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+.cookie-banner-text {
+  font-size: .83rem; color: rgba(255,255,255,.6); line-height: 1.6;
+  max-width: 680px;
+}
+.cookie-banner-text strong { color: rgba(255,255,255,.85); }
+.cookie-link {
+  background: none; border: none; cursor: pointer;
+  color: var(--terra-l); font-size: .83rem;
+  font-family: var(--sans); text-decoration: underline;
+  padding: 0; margin-left: .4rem;
+}
+.cookie-banner-btns { display: flex; gap: .7rem; flex-shrink: 0; }
+.cookie-btn {
+  padding: .55rem 1.3rem; border-radius: 4px;
+  font-size: .82rem; font-weight: 500;
+  font-family: var(--sans); cursor: pointer; border: none;
+  transition: opacity .2s, transform .15s;
+}
+.cookie-btn:hover { opacity: .88; transform: translateY(-1px); }
+.cookie-btn-accept { background: var(--terra); color: var(--white); }
+.cookie-btn-reject {
+  background: transparent; color: rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-d1 { transition-delay: 0.08s; }
+.reveal-d2 { transition-delay: 0.16s; }
+.reveal-d3 { transition-delay: 0.24s; }
+.reveal-d4 { transition-delay: 0.32s; }
+.reveal-d5 { transition-delay: 0.40s; }
+.reveal-d6 { transition-delay: 0.48s; }
+
+/* ── BOTONES: FEEDBACK TÁCTIL ── */
+.btn-fill:active,
+.btn-terra:active,
+.btn-hero-wa:active,
+.btn-hero-call:active,
+.btn-hero-wa-green:active,
+.btn-cta-wa:active,
+.btn-cta-call:active,
+.v-btn-primary:active,
+.v-btn-wa:active,
+.nav-cta:active,
+.mobile-cta:active {
+  transform: scale(0.97) translateY(1px) !important;
+  transition: transform 0.08s ease !important;
+}
+
+/* ── ANIMACIONES ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow { animation: fadeUp 0.5s ease both; }
+.hero h1      { animation: fadeUp 0.5s 0.1s ease both; }
+.hero-desc    { animation: fadeUp 0.5s 0.2s ease both; }
+.hero-actions { animation: fadeUp 0.5s 0.3s ease both; }
+.hero-right   { animation: fadeUp 0.6s 0.25s ease both; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; padding: 0; padding-top: 68px; }
+  .hero-left { padding: 4rem 6vw 3rem; }
+  .hero-right { clip-path: none; margin: 0; padding: 3rem 6vw 4rem; }
+  .team-layout { grid-template-columns: 1fr; }
+  .team-header { grid-column: span 1; }
+  .team-card { grid-template-columns: 1fr; }
+  .team-photo {
+    width: 100%;
+    height: auto;
+    min-height: unset;
+    border-left: none;
+    border-top: 1px solid rgba(27,42,59,0.06);
+  }
+  .family-block { grid-column: span 1; grid-template-columns: 1fr; gap: 1.5rem; }
+  .visit-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .visit-promise { margin-top: 0; }
+  .ubicacion-layout { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .problem-grid  { grid-template-columns: 1fr; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+img { max-width: 100%; height: auto; display: block; }
+
+@media (max-width: 640px) {
+  .sec { padding: 3rem 5vw; }
+  .hero { padding: 0; padding-top: 68px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .problem-item { grid-template-columns: 1fr; }
+  .problem-q { border-right: none; border-bottom: 1px solid rgba(27,42,59,0.08); padding-right: 0; }
+  .problem-a { padding-left: 0; }
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+  #hero-zone { height: calc(100svh + 80vh); }
+  #hero-sticky { height: 100svh; }
+  #video-overlay { justify-content: flex-end; padding-bottom: max(5rem, 10vh); overflow: hidden; }
+  .v-btns { flex-direction: column; align-items: center; gap: .6rem; }
+  .v-title { font-size: clamp(2rem, 9vw, 3rem); margin-bottom: .7rem; }
+  .v-eyebrow { margin-bottom: .5rem; }
+  .v-sub { font-size: .84rem; line-height: 1.6; margin-bottom: 1rem; }
+  .v-btn-primary, .v-btn-wa { padding: .72rem 1.8rem; font-size: .85rem; }
+  .scroll-hint { display: none !important; }
+  /* Marquee: reducir tamaño en móvil */
+  .talum-marquee__track { font-size: clamp(1.4rem, 7vw, 2rem); }
+  /* Footer: una columna */
+  .footer-main { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 6vw 2.5rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  /* FAQ: ajustar padding del summary */
+  .faq-summary { padding: 1.2rem 0.5rem; font-size: 0.88rem; }
+}
+
+/* WhatsApp flotante: en táctil solo el icono, sin etiqueta */
+@media (hover: none) {
+  .wa-float { width: 56px !important; border-radius: 50% !important; transition: box-shadow 0.2s !important; }
+  .wa-float-label { display: none !important; }
+}
+
+/* ── HORIZONTAL SCROLL SERVICIOS ── */
+#servicios {
+  height: calc(100vh + 5 * 90vh);
+  position: relative;
+}
+.hs-sticky {
+  position: sticky; top: 0; height: 100vh;
+  overflow: hidden; background: var(--off);
+}
+@media (max-width: 640px) {
+  #servicios { height: calc(100svh + 5 * 90vh); }
+  .hs-sticky { top: 68px; height: calc(100svh - 68px); }
+}
+.hs-header {
+  position: absolute; top: max(5rem,8vh); left: max(2rem,7vw);
+  z-index: 10; pointer-events: none;
+  background: rgba(237,235,228,0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+}
+.hs-header .eyebrow { color: var(--terra); margin-bottom: 0.3rem; }
+.hs-htitle { font-family: var(--serif); font-size: clamp(1.3rem,2.2vw,1.9rem); font-weight: 700; color: var(--ink); letter-spacing: -.02em; }
+.hs-htitle em { font-style: italic; color: var(--terra); }
+.hs-counter {
+  position: absolute; top: max(5rem,8vh); right: max(2rem,7vw);
+  font-size: .78rem; letter-spacing: .1em; color: var(--muted); z-index: 10;
+}
+.hs-counter-curr { color: var(--ink); font-weight: 600; }
+.hs-track {
+  display: flex; width: calc(6 * 100vw); height: 100%;
+  will-change: transform;
+}
+.hs-panel {
+  flex: 0 0 100vw; height: 100%;
+  display: flex; align-items: center;
+  padding: max(10rem,15vh) max(2rem,8vw) max(3rem,5vh);
+  position: relative; overflow: hidden;
+}
+.hs-panel:nth-child(odd)  { background: var(--off); }
+.hs-panel:nth-child(even) { background: var(--white); }
+.hs-panel-num {
+  font-family: var(--serif); font-weight: 700; line-height: 1;
+  font-size: clamp(9rem,17vw,16rem);
+  color: var(--sand-d); opacity: .25; letter-spacing: -.04em;
+  position: absolute; left: max(2rem,7vw); bottom: max(1rem,3vh);
+  user-select: none; pointer-events: none; z-index: 0;
+}
+.hs-panel-content { max-width: min(500px,46vw); position: relative; z-index: 1; }
+.hs-panel-name {
+  font-family: var(--serif); font-weight: 700; line-height: 1.1;
+  font-size: clamp(2rem,4.5vw,3.8rem);
+  color: var(--ink); margin-bottom: 1.4rem; letter-spacing: -.02em;
+}
+.hs-panel-name em { font-style: italic; color: var(--terra); }
+.hs-panel-desc {
+  font-size: clamp(.9rem,1.25vw,1.05rem); color: var(--slate-m);
+  line-height: 1.8;
+}
+/* Imagen derecha con máscara de degradado */
+.hs-panel-img {
+  position: absolute; right: 0; top: 0; bottom: 0;
+  width: 52%; overflow: hidden; z-index: 0;
+}
+.hs-panel-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
+  mask-image: linear-gradient(to right, transparent 0%, black 30%);
+}
+.hs-progress {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; background: rgba(62,78,79,.1); z-index: 10;
+}
+.hs-progress-fill { height: 100%; background: var(--terra); width: 0%; }
+@media (max-width: 640px) {
+  .hs-header { top: 1.2rem; }
+  .hs-counter { top: 1.2rem; }
+  .hs-panel { padding: 5rem 5vw 3.5rem; align-items: flex-end; }
+  .hs-panel-content {
+    max-width: 42vw; position: relative; z-index: 2;
+    padding-right: .5rem;
+  }
+  .hs-panel-name {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+    margin-bottom: .7rem; line-height: 1.05;
+    color: var(--ink);
+  }
+  .hs-panel-desc {
+    font-size: .95rem; line-height: 1.65; color: var(--ink);
+    opacity: .85;
+  }
+  .hs-panel-img { width: 72%; right: 0; }
+  .hs-panel-img img {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 44%);
+    mask-image: linear-gradient(to right, transparent 0%, black 44%);
+  }
+  .hs-panel-num { font-size: 5rem; bottom: .8rem; left: max(1.2rem,4vw); }
+}
+
+/* ── HERO SCROLL ZONE ── */
+#hero-zone {
+  height: calc(100dvh + 100vh);
+  position: relative;
+}
+#hero-sticky {
+  position: sticky; top: 0; height: 100dvh;
+  overflow: hidden; background: var(--night);
+}
+/* Wrapper del vídeo — el blur se aplica aquí, no al <video> (evita bug iOS) */
+#hero-bg {
+  position: absolute; inset: 0;
+  transform: scale(1.1);
+  filter: blur(4px);
+  will-change: filter, transform;
+}
+#hero-video {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+#video-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(15,26,38,.5) 0%, rgba(15,26,38,.08) 40%, rgba(15,26,38,.65) 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 2rem;
+}
+.v-eyebrow { font-size: .72rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--terra-l); margin-bottom: 1.2rem; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
+.v-title { font-family: var(--serif); font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 700; color: var(--white); line-height: 1.08; margin-bottom: 1.4rem; max-width: 800px; letter-spacing: -.02em; text-shadow: 0 4px 24px rgba(0,0,0,0.75), 0 1px 6px rgba(0,0,0,0.5); }
+.v-title em { font-style: italic; color: var(--terra-l); }
+.v-sub { font-size: clamp(.95rem, 1.6vw, 1.15rem); color: rgba(255,255,255,.78); max-width: 540px; margin-bottom: 2.5rem; font-weight: 300; line-height: 1.75; text-shadow: 0 2px 14px rgba(0,0,0,0.65); }
+.v-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.v-btn-primary { padding: .9rem 2.4rem; background: var(--terra); color: var(--white); border-radius: 4px; font-size: .92rem; font-weight: 500; letter-spacing: .03em; transition: background .2s, transform .15s; text-decoration: none; display: inline-block; }
+.v-btn-primary:hover { background: var(--terra-l); transform: translateY(-2px); }
+.v-btn-wa { display: inline-flex; align-items: center; gap: .5rem; padding: .9rem 1.6rem; background: #25D366; color: var(--white); border-radius: 4px; font-size: .92rem; font-weight: 500; text-decoration: none; transition: background .2s, transform .15s; }
+.v-btn-wa:hover { background: #1da851; transform: translateY(-2px); }
+.scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .5rem; color: rgba(255,255,255,.45); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; }
+.scroll-hint-line { width: 1px; height: 38px; background: linear-gradient(to bottom, rgba(255,255,255,.45), transparent); animation: scrollDown 2s ease-in-out infinite; }
+@keyframes scrollDown { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+#progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--terra); width: 0%; z-index: 300; pointer-events: none; }
+
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo"><span class="nav-logo-main">Talum</span></a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#equipo">Quiénes somos</a></li>
+    <li><a href="#primera-visita">Primera visita</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="tel:+34681800118" class="nav-tel">681 800 118</a></li>
+    <li><a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="nav-cta">Pedir cita</a></li>
+  </ul>
+  <div class="nav-right-group">
+    <a href="tel:+34681800118" class="nav-tel-icon" aria-label="Llamar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.6 4.36 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+    <button class="nav-burger" id="nav-burger" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <ul>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#equipo">Quiénes somos</a></li>
+    <li><a href="#primera-visita">Primera visita</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="mobile-cta">Pedir cita &rarr;</a>
+  <a href="tel:+34681800118" class="mobile-cta" style="background:transparent;border:1px solid rgba(255,255,255,0.3);margin-top:0.5rem;">&#128222; 681 800 118</a>
+</div>
+
+<section id="hero-zone">
+  <div id="hero-sticky">
+  <div id="hero-bg">
+    <video id="hero-video" src="assets/hero.mp4" preload="auto" muted playsinline webkit-playsinline></video>
+  </div>
+  <div id="video-overlay">
+    <p class="v-eyebrow">Podólogo en Portugalete · Avenida Repelega 11</p>
+    <h1 class="v-title">Hay dolores<br>que se aprenden<br>a <em>ignorar.</em></h1>
+    <p class="v-sub">No deberías acostumbrarte al dolor. Y no tienes que hacerlo. Si algo duele al caminar, normalmente hay una causa. Y en la mayoría de los casos, tiene solución.</p>
+    <div class="v-btns">
+      <a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="v-btn-primary">Pedir cita &rarr;</a>
+      <a href="https://wa.me/34681800118" target="_blank" rel="noopener noreferrer" class="v-btn-wa"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
+    </div>
+    <div class="scroll-hint"><span>Desplázate</span><div class="scroll-hint-line"></div></div>
+  </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-inner">
+    <p class="strip-quote">"No somos ninguna franquicia. No somos una clínica de paso. Somos un proyecto de barrio — y lo tratamos como tal."</p>
+    <p class="strip-attr">Más de 40 años en Repelega · Cuarta generación</p>
+  </div>
+</div>
+
+<!-- PROBLEMAS -->
+<section class="sec" id="problemas">
+  <div class="eyebrow reveal">¿Te identificas?</div>
+  <h2 class="sec-title reveal reveal-d1">Si has llegado hasta aquí,<br>probablemente te pasa <em>algo de esto</em></h2>
+  <p class="sec-lead reveal reveal-d2">El callo que duele pero "tampoco es para tanto". La uña que lleva meses molestando. Poco a poco te acostumbras. Pero no deberías hacerlo.</p>
+
+  <div class="problem-cat reveal">Uñas, durezas y callos</div>
+  <div class="problem-grid">
+    <div class="problem-card dark reveal reveal-d1" data-n="01">
+      <p class="pc-q">Llevo meses con este callo y ya no sé cómo andar</p>
+      <span class="pc-label">Lo que hacemos</span>
+      <p class="pc-a">Eliminamos la lesión de forma indolora y analizamos por qué ha aparecido, para evitar que vuelva. La diferencia al caminar se nota desde el primer momento.</p>
+    </div>
+    <div class="problem-card dark reveal reveal-d2" data-n="02">
+      <p class="pc-q">Tengo una uña encarnada desde hace semanas y ya no puedo ni ponerme el zapato</p>
+      <span class="pc-label">Lo que hacemos</span>
+      <p class="pc-a">Si el tratamiento local no es suficiente, resolvemos la uña encarnada en consulta y con anestesia local, sin necesidad de hospital.</p>
+    </div>
+    <div class="problem-card dark reveal reveal-d3" data-n="03">
+      <p class="pc-q">Tengo las uñas muy feas y creo que son hongos, pero me da vergüenza enseñar los pies</p>
+      <span class="pc-label">Lo que hacemos</span>
+      <p class="pc-a">Es mucho más frecuente de lo que parece. Y no tiene nada que ver con la higiene. Valoramos qué está ocurriendo y aplicamos el tratamiento más adecuado. Sin juicios.</p>
+    </div>
+  </div>
+
+  <div class="problem-cat reveal">Dolores al caminar</div>
+  <div class="problem-grid">
+    <div class="problem-card dark reveal reveal-d1" data-n="04">
+      <p class="pc-q">Me duele el talón cada mañana al dar los primeros pasos</p>
+      <span class="pc-label">Lo que hacemos</span>
+      <p class="pc-a">Analizamos cómo caminas. Si es necesario, diseñamos plantillas personalizadas, hechas para tu pie. El objetivo no es solo aliviar el dolor: es tratar el origen del problema.</p>
+    </div>
+    <div class="problem-card dark reveal reveal-d2" data-n="05">
+      <p class="pc-q">Llevo meses con una lesión en el pie que no me deja entrenar como quiero</p>
+      <span class="pc-label">Lo que hacemos</span>
+      <p class="pc-a">Analizamos tu pisada, tratamos la lesión y trabajamos contigo para que puedas volver a moverte con confianza y sin miedo a que el dolor reaparezca.</p>
+    </div>
+    <div class="problem-card dark reveal reveal-d3" data-n="06">
+      <p class="pc-q">He probado de todo y el talón sigue igual</p>
+      <span class="pc-label">Lo que hacemos</span>
+      <p class="pc-a">Hay dolores que no responden al reposo ni a los antiinflamatorios habituales. Cuando está indicado, realizamos infiltraciones para tratar directamente el foco del problema.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS — horizontal scroll -->
+<section id="servicios">
+  <div class="hs-sticky">
+
+    <!-- Cabecera fija — no se mueve -->
+    <div class="hs-header">
+      <div class="eyebrow">Lo que hacemos</div>
+      <div class="hs-htitle">Servicios en <em>Talum</em></div>
+    </div>
+
+    <!-- Contador de panel -->
+    <div class="hs-counter">
+      <span class="hs-counter-curr" id="hs-idx">01</span> / 06
+    </div>
+
+    <!-- Track que se desplaza horizontalmente -->
+    <div class="hs-track" id="hs-track">
+
+      <div class="hs-panel">
+        <div class="hs-panel-content">
+          <div class="hs-panel-name">Quiropodología</div>
+          <p class="hs-panel-desc">Corte y fresado de uñas, eliminación de callosidades y durezas, tratamiento de la onicocriptosis. Prevención y mantenimiento del pie sano.</p>
+        </div>
+        <div class="hs-panel-img"><img src="assets/servicios/quiropodologia.png" alt="Quiropodología en Talum" loading="lazy"></div>
+        <div class="hs-panel-num">01</div>
+      </div>
+
+      <div class="hs-panel">
+        <div class="hs-panel-content">
+          <div class="hs-panel-name">Estudio<br>de la pisada</div>
+          <p class="hs-panel-desc">Análisis biomecánico del pie y la marcha. Valoración de la distribución de presiones y la alineación. Plantillas a medida si están indicadas.</p>
+        </div>
+        <div class="hs-panel-img"><img src="assets/servicios/estudio_pisada.png" alt="Estudio de la pisada en Talum" loading="lazy"></div>
+        <div class="hs-panel-num">02</div>
+      </div>
+
+      <div class="hs-panel">
+        <div class="hs-panel-content">
+          <div class="hs-panel-name">Podología<br><em>deportiva</em></div>
+          <p class="hs-panel-desc">Valoración del pie en corredores y deportistas. Fascitis plantar, tendinopatías y metatarsalgia. Vuelta al entrenamiento con seguridad.</p>
+        </div>
+        <div class="hs-panel-img"><img src="assets/servicios/podologia_deportiva.png" alt="Podología deportiva en Talum" loading="lazy" style="object-position: 80% center;"></div>
+        <div class="hs-panel-num">03</div>
+      </div>
+
+      <div class="hs-panel">
+        <div class="hs-panel-content">
+          <div class="hs-panel-name">Ecografía<br>del pie</div>
+          <p class="hs-panel-desc">Diagnóstico por imagen sin radiación. Fascia plantar, tendón de Aquiles, tibial posterior y tejidos blandos. Disponible en consulta, sin esperas.</p>
+        </div>
+        <div class="hs-panel-img"><img src="assets/servicios/ecografia_pie.png" alt="Ecografía del pie en Talum" loading="lazy"></div>
+        <div class="hs-panel-num">04</div>
+      </div>
+
+      <div class="hs-panel">
+        <div class="hs-panel-content">
+          <div class="hs-panel-name">Hongos<br>y papilomas</div>
+          <p class="hs-panel-desc">Tratamiento de dermatomicosis, onicomicosis y verrugas plantares. Diagnóstico adecuado antes de tratar. Sin juicios y sin vergüenza.</p>
+        </div>
+        <div class="hs-panel-img"><img src="assets/servicios/hongos_papilomas.png" alt="Hongos y papilomas en Talum" loading="lazy" style="object-position: right center;"></div>
+        <div class="hs-panel-num">05</div>
+      </div>
+
+      <div class="hs-panel">
+        <div class="hs-panel-content">
+          <div class="hs-panel-name">Asesoramiento<br>en calzado</div>
+          <p class="hs-panel-desc">Sin acuerdos comerciales con marcas. Solo lo que de verdad le va bien a tu pie. A veces el problema no está en el pie: está en lo que llevas puesto.</p>
+        </div>
+        <div class="hs-panel-img"><img src="assets/servicios/asesoramiento_calzado.png" alt="Asesoramiento en calzado en Talum" loading="lazy"></div>
+        <div class="hs-panel-num">06</div>
+      </div>
+
+    </div><!-- /hs-track -->
+
+    <!-- Barra de progreso -->
+    <div class="hs-progress"><div class="hs-progress-fill" id="hs-progress-fill"></div></div>
+
+  </div><!-- /hs-sticky -->
+</section>
+
+<!-- Visita a domicilio (fuera del scroll horizontal) -->
+<div class="sec" style="padding-top:0;padding-bottom:2rem;">
+  <div class="domicilio-banner">
+    <div class="domicilio-left">
+      <strong>Visita a domicilio disponible</strong>
+      <p>Para personas con movilidad reducida o quienes prefieren atención en casa. Mismo nivel de servicio que en clínica.</p>
+    </div>
+    <div class="domicilio-tags">
+      <span class="tag">Portugalete</span>
+      <span class="tag">Sestao</span>
+      <span class="tag">Santurtzi</span>
+      <span class="tag">Barakaldo</span>
+      <span class="tag">Bizkaia</span>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="talum-marquee" aria-hidden="true">
+  <div class="talum-marquee__track">
+    <span>El dolor <em>no</em> es normal.</span><span class="talum-marquee__dot">·</span>
+    <span>Más de 40 años en Repelega.</span><span class="talum-marquee__dot">·</span>
+    <span>Del síntoma a la <em>causa.</em></span><span class="talum-marquee__dot">·</span>
+    <span>Sin prisas. Sin juicios.</span><span class="talum-marquee__dot">·</span>
+    <span>Cada pie es <em>diferente.</em></span><span class="talum-marquee__dot">·</span>
+    <span>Cuarta generación.</span><span class="talum-marquee__dot">·</span>
+    <span>Podología en <em>Portugalete.</em></span><span class="talum-marquee__dot">·</span>
+    <span>El dolor <em>no</em> es normal.</span><span class="talum-marquee__dot">·</span>
+    <span>Más de 40 años en Repelega.</span><span class="talum-marquee__dot">·</span>
+    <span>Del síntoma a la <em>causa.</em></span><span class="talum-marquee__dot">·</span>
+    <span>Sin prisas. Sin juicios.</span><span class="talum-marquee__dot">·</span>
+    <span>Cada pie es <em>diferente.</em></span><span class="talum-marquee__dot">·</span>
+    <span>Cuarta generación.</span><span class="talum-marquee__dot">·</span>
+    <span>Podología en <em>Portugalete.</em></span><span class="talum-marquee__dot">·</span>
+  </div>
+</div>
+
+<!-- QUIÉNES SOMOS -->
+<section class="sec sec-off" id="equipo">
+  <div class="team-layout">
+    <div class="team-header">
+      <div class="eyebrow reveal">Quiénes somos</div>
+      <h2 class="sec-title reveal reveal-d1">Un proyecto de barrio.<br><em>La cuarta generación.</em></h2>
+    </div>
+
+    <div class="team-card reveal reveal-d2">
+      <div class="team-card-content">
+      <div class="team-name">Joel</div>
+      <span class="team-role">Podólogo</span>
+      <p class="team-bio">Me llamo Joel. Soy podólogo titulado y antes de dedicarme a la podología trabajé como enfermero durante cinco años, buena parte de ese tiempo en quirófano.</p>
+      <p class="team-bio">Esa etapa me enseñó algo fundamental: trabajar con precisión, respetar los tiempos y mantener la calma cuando algo se complica. Pero también algo igual de importante: tratar a las personas cuando no están en su mejor momento.</p>
+      <p class="team-bio">Elegí la podología porque quería ofrecer un servicio cercano, bien hecho y en el que cada paciente se sienta escuchado.</p>
+    </div>
+      <img class="team-photo" src="assets/joel.jpg" alt="Joel, podólogo en Talum" style="object-position: center 20%;" loading="lazy">
+    </div>
+
+    <div class="team-card reveal reveal-d3">
+      <div class="team-card-content">
+      <div class="team-name">Ameli</div>
+      <span class="team-role">Recepción</span>
+      <p class="team-bio">Llevo más de 30 años en el barrio, conozco a su gente y entiendo bien lo que necesita.</p>
+      <p class="team-bio">Cuando entres por la puerta, probablemente seré la primera persona que veas. Y en una clínica de barrio, eso no es un detalle menor.</p>
+    </div>
+      <img class="team-photo" src="assets/ameli.jpg" alt="Ameli, recepción en Talum" style="object-position: center 5%;" loading="lazy">
+    </div>
+
+    <div class="family-block">
+      <div>
+        <div class="family-years">40+<span>años en Repelega</span></div>
+      </div>
+      <div class="family-text">
+        <p>Este local lleva <strong>más de 40 años</strong> formando parte de Portugalete. Lo que antes fue un negocio familiar, hoy es una clínica de podología.</p>
+        <p style="margin-top:0.9rem;">La <strong>cuarta generación de la misma familia</strong> sigue aquí, con el mismo compromiso de siempre: estar cerca de la gente del barrio. No somos ninguna franquicia. No somos una clínica de paso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPROMISOS -->
+<section class="sec sec-dark" id="compromisos">
+  <div class="eyebrow reveal" style="color: var(--terra-l);">Cómo trabajamos</div>
+  <h2 class="sec-title on-dark reveal reveal-d1">Nuestros compromisos<br>en <em>Talum</em></h2>
+
+  <div class="compromisos-grid reveal">
+    <div class="compromiso reveal">
+      <div class="comp-num">1</div>
+      <div class="comp-title">Solo proponemos lo que realmente necesitas</div>
+      <p class="comp-desc">Si tu problema tiene una solución sencilla, te la explicaremos y la aplicaremos. Sin tratamientos innecesarios y sin visitas de más.</p>
+    </div>
+    <div class="compromiso reveal reveal-d1">
+      <div class="comp-num">2</div>
+      <div class="comp-title">Te diremos con honestidad hasta dónde podemos ayudarte</div>
+      <p class="comp-desc">Si necesitas algo que aquí no podemos ofrecer, te lo diremos con claridad y te orientaremos hacia el profesional adecuado.</p>
+    </div>
+    <div class="compromiso reveal reveal-d2">
+      <div class="comp-num">3</div>
+      <div class="comp-title">Cada consulta tiene su tiempo</div>
+      <p class="comp-desc">No trabajamos con prisas ni consultas encadenadas. Cada persona y cada problema merecen ser atendidos con calma.</p>
+    </div>
+    <div class="compromiso reveal reveal-d3">
+      <div class="comp-num">4</div>
+      <div class="comp-title">El asesoramiento en calzado es independiente</div>
+      <p class="comp-desc">Si te recomendamos algo, será porque creemos que puede ayudarte. No tenemos acuerdos comerciales con marcas.</p>
+    </div>
+    <div class="compromiso reveal reveal-d4">
+      <div class="comp-num">5</div>
+      <div class="comp-title">Queremos que entiendas qué te pasa</div>
+      <p class="comp-desc">No saldrás de la consulta con dudas. Te explicaremos qué ocurre, por qué sucede y qué opciones hay para tratarlo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIMERA VISITA -->
+<section class="sec" id="primera-visita">
+  <div class="eyebrow reveal">Primera visita</div>
+  <h2 class="sec-title reveal reveal-d1">Ven tranquilo.<br><em>Sin sorpresas.</em></h2>
+  <p class="sec-lead reveal reveal-d2">Ir al podólogo por primera vez genera dudas. Aquí te lo contamos todo para que vengas tranquilo.</p>
+
+  <div class="visit-layout">
+    <div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Primero, te escuchamos</div>
+            <p class="step-text">Antes de mirar nada, queremos saber qué te pasa, desde cuándo y cómo te afecta en el día a día. A veces lo más importante no está en el pie, sino en lo que el paciente cuenta.</p>
+          </div>
+        </div>
+        <div class="step reveal reveal-d1">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Luego, exploramos</div>
+            <p class="step-text">Miramos el pie con detenimiento. La piel, las uñas, la forma en que apoyas, cualquier señal que nos ayude a entender qué está ocurriendo.</p>
+          </div>
+        </div>
+        <div class="step reveal reveal-d2">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Y si es posible, actuamos ese mismo día</div>
+            <p class="step-text">Si el problema lo permite, no te mandamos a casa sin más. Tratamos en la misma visita siempre que podemos.</p>
+          </div>
+        </div>
+        <div class="step reveal reveal-d3">
+          <div class="step-num">4</div>
+          <div>
+            <div class="step-title">Saldrás sabiendo qué tienes</div>
+            <p class="step-text">Sin tecnicismos, sin diagnósticos a medias. Qué te pasa, por qué te pasa y qué vamos a hacer al respecto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="visit-promise reveal">
+      <h3>Lo que no va a pasar<br>en esa <em>visita</em></h3>
+      <div class="promise-list">
+        <div class="promise-item reveal">No te haremos nada sin explicarte antes qué es y para qué sirve.</div>
+        <div class="promise-item reveal reveal-d1">No se toca nada sin que tú lo sepas y lo consientas.</div>
+        <div class="promise-item reveal reveal-d2">No hay prisas. La primera consulta dura entre 40 y 50 minutos. Ese tiempo es tuyo.</div>
+        <div class="promise-item reveal reveal-d3">Si necesitas más de una visita, te lo decimos con honestidad.</div>
+        <div class="promise-item reveal reveal-d4">Si lo que necesitas no lo podemos hacer aquí, también te lo decimos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="eyebrow reveal">Preguntas frecuentes</div>
+  <h2 class="sec-title reveal reveal-d1">Lo que más<br>nos <em>preguntan</em></h2>
+
+  <p class="faq-hint reveal">Pulsa en cada pregunta para ver la respuesta</p>
+  <div class="faq-list">
+    <details class="faq-details reveal">
+      <summary class="faq-summary">¿Necesito derivación médica para ir al podólogo?</summary>
+      <div class="faq-body"><div class="faq-body-inner">
+        <p class="faq-answer">No. La podología es una profesión sanitaria de acceso directo. Puedes pedir cita sin pasar por tu médico de cabecera ni por ningún otro especialista.</p>
+      </div></div>
+    </details>
+    <details class="faq-details reveal reveal-d1">
+      <summary class="faq-summary">¿El dolor de talón siempre es fascitis plantar?</summary>
+      <div class="faq-body"><div class="faq-body-inner">
+        <p class="faq-answer">No necesariamente. La fascitis plantar es la causa más frecuente, pero no la única. Por eso es importante valorar cada caso antes de tratar.</p>
+      </div></div>
+    </details>
+    <details class="faq-details reveal reveal-d2">
+      <summary class="faq-summary">¿Las plantillas siempre son necesarias?</summary>
+      <div class="faq-body"><div class="faq-body-inner">
+        <p class="faq-answer">No siempre. Las plantillas son una herramienta más dentro del tratamiento, no una solución universal. Solo las indicamos cuando la valoración clínica lo justifica.</p>
+      </div></div>
+    </details>
+    <details class="faq-details reveal reveal-d3">
+      <summary class="faq-summary">¿Los hongos en las uñas tienen que ver con la higiene?</summary>
+      <div class="faq-body"><div class="faq-body-inner">
+        <p class="faq-answer">No. La onicomicosis es una infección fúngica como cualquier otra: no está relacionada con la higiene personal. Es más frecuente de lo que parece y tiene tratamiento.</p>
+      </div></div>
+    </details>
+    <details class="faq-details reveal reveal-d4">
+      <summary class="faq-summary">¿Hacéis visitas a domicilio?</summary>
+      <div class="faq-body"><div class="faq-body-inner">
+        <p class="faq-answer">Sí. El servicio está pensado para personas con movilidad reducida o quienes prefieren atención en casa. Cubrimos Portugalete, Sestao, Santurtzi, Barakaldo y otras localidades de Bizkaia.</p>
+      </div></div>
+    </details>
+    <details class="faq-details reveal reveal-d5">
+      <summary class="faq-summary">¿Cuánto dura la primera visita?</summary>
+      <div class="faq-body"><div class="faq-body-inner">
+        <p class="faq-answer">Entre 40 y 50 minutos. No trabajamos con prisas ni consultas encadenadas. Ese tiempo es para entender bien qué te pasa y empezar a resolverlo.</p>
+      </div></div>
+    </details>
+    <details class="faq-details reveal reveal-d6">
+      <summary class="faq-summary">¿Qué diferencia hay entre un callo y una verruga plantar?</summary>
+      <div class="faq-body"><div class="faq-body-inner">
+        <p class="faq-answer">Pueden parecerse, pero son cosas distintas. El callo es una respuesta de la piel a la presión; la verruga plantar es una infección viral. El tratamiento es diferente.</p>
+      </div></div>
+    </details>
+    <details class="faq-details reveal">
+      <summary class="faq-summary">¿Atendéis pacientes diabéticos?</summary>
+      <div class="faq-body"><div class="faq-body-inner">
+        <p class="faq-answer">Sí. La revisión periódica del pie en personas con diabetes es especialmente importante para prevenir complicaciones. Incluye exploración de la sensibilidad, circulación y cuidado de la piel y las uñas.</p>
+      </div></div>
+    </details>
+    <details class="faq-details reveal">
+      <summary class="faq-summary">¿Cuánto cuesta la consulta?</summary>
+      <div class="faq-body"><div class="faq-body-inner">
+        <p class="faq-answer">El precio varía según el tipo de consulta y el tratamiento que se realice. Si quieres información antes de pedir cita, escríbenos por WhatsApp o llámanos y te lo contamos sin compromiso.</p>
+      </div></div>
+    </details>
+  </div>
+</section>
+
+<!-- UBICACIÓN -->
+<section class="sec" id="ubicacion">
+  <div class="eyebrow reveal">Dónde estamos</div>
+  <h2 class="sec-title reveal reveal-d1">Encuéntranos<br>en <em>Repelega</em></h2>
+
+  <div class="ubicacion-layout">
+    <div>
+      <div class="info-blocks">
+        <div class="info-block reveal">
+          <div class="info-block-label">Dirección</div>
+          <div class="info-block-val">
+            Avenida Repelega 11
+            <small>48920 Portugalete, Bizkaia</small>
+          </div>
+        </div>
+        <div class="info-block reveal reveal-d1">
+          <div class="info-block-label">Horario</div>
+          <div class="info-block-val">
+            Lunes a Viernes
+            <small>09:00 – 20:00 h</small>
+          </div>
+        </div>
+        <div class="info-block reveal reveal-d2">
+          <div class="info-block-label">Contacto</div>
+          <div class="info-block-val">
+            <a href="https://wa.me/34681800118" target="_blank" rel="noopener noreferrer" style="color:var(--terra);text-decoration:none;font-weight:500;">WhatsApp →</a>
+            <small>También por teléfono</small>
+          </div>
+        </div>
+        <div class="info-block reveal reveal-d3">
+          <div class="info-block-label">Área de cobertura</div>
+          <div class="info-block-val">
+            Portugalete · Sestao · Santurtzi
+            <small>Barakaldo · Bizkaia (a domicilio)</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-wrap reveal reveal-d2">
+      <iframe
+        src="https://maps.google.com/maps?q=Floristeria+Kiara+Repelega+Portugalete&output=embed&t=k&z=18"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación de Talum Clínica Podológica">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section" id="contacto">
+  <div class="cta-inner">
+    <div class="eyebrow reveal" style="color:var(--terra-l);justify-content:center;">Pide tu cita</div>
+    <h2 class="cta-title reveal reveal-d1">¿Te pasa algo<br>parecido? <em>Podemos<br>valorarlo.</em></h2>
+    <p class="cta-desc reveal reveal-d2">Consulta en Avenida Repelega 11, Portugalete.<br>Sin prisas. Sin tratamientos innecesarios.</p>
+    <div class="cta-btns reveal reveal-d3">
+      <a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="btn-terra">Pedir cita →</a>
+      <a href="https://wa.me/34681800118" target="_blank" rel="noopener noreferrer" class="btn-cta-wa">WhatsApp</a>
+      <a href="tel:+34681800118" class="btn-cta-call">Llamar</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+
+    <!-- Marca -->
+    <div class="footer-brand-col">
+      <div class="footer-brand-logo">
+        <div class="footer-brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8 2 5 5.5 5 9c0 5 7 13 7 13s7-8 7-13c0-3.5-3-7-7-7z"/>
+            <circle cx="12" cy="9" r="2.5" fill="white" stroke="none"/>
+          </svg>
+        </div>
+        <a href="#" class="footer-brand-name">
+          Talum
+          <small>Clínica Podológica</small>
+        </a>
+      </div>
+      <p class="footer-tagline">Avenida Repelega 11<br>48920 Portugalete, Bizkaia<br>Más de 40 años en el barrio.</p>
+    </div>
+
+    <!-- Col 1: Servicios -->
+    <div class="footer-nav-col">
+      <div class="footer-nav-label">Servicios</div>
+      <ul class="footer-nav-list">
+        <li><a href="#servicios">Quiropodología</a></li>
+        <li><a href="#servicios">Estudio de la pisada</a></li>
+        <li><a href="#servicios">Podología deportiva</a></li>
+        <li><a href="#servicios">Ecografía del pie</a></li>
+        <li><a href="#servicios">Hongos y papilomas</a></li>
+        <li><a href="#servicios">Asesoramiento en calzado</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 2: Clínica -->
+    <div class="footer-nav-col">
+      <div class="footer-nav-label">Clínica</div>
+      <ul class="footer-nav-list">
+        <li><a href="#equipo">Quiénes somos</a></li>
+        <li><a href="#primera-visita">Primera visita</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+        <li><a href="#ubicacion">Dónde estamos</a></li>
+        <li><a href="#servicios">Visita a domicilio</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Contacto -->
+    <div class="footer-nav-col">
+      <div class="footer-nav-label">Contacto</div>
+      <ul class="footer-nav-list">
+        <li><a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="cta-link">Pedir cita →</a></li>
+        <li><a href="https://wa.me/34681800118" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        <li><a href="tel:+34681800118">+34 681 800 118</a></li>
+        <li><a href="#ubicacion">Lunes – Viernes · 09:00–20:00</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">
+      Talum Clínica Podológica · Autorizada Decreto 31/2006 · Colegio Oficial de Podólogos del País Vasco
+    </p>
+    <div class="footer-legal-links">
+      <button class="legal-link" onclick="openModal('modal-aviso')">Aviso legal</button>
+      <span class="footer-sep">·</span>
+      <button class="legal-link" onclick="openModal('modal-privacidad')">Política de privacidad</button>
+      <span class="footer-sep">·</span>
+      <button class="legal-link" onclick="openModal('modal-cookies')">Política de cookies</button>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     MODALES LEGALES
+══════════════════════════════════════════ -->
+
+<!-- AVISO LEGAL -->
+<div id="modal-aviso" class="legal-modal" role="dialog" aria-modal="true" aria-labelledby="aviso-title">
+  <div class="legal-modal-box">
+    <button class="legal-modal-close" onclick="closeModal('modal-aviso')" aria-label="Cerrar">✕</button>
+    <h2 id="aviso-title">Aviso Legal</h2>
+
+    <h3>1. Datos identificativos del titular</h3>
+    <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa:</p>
+    <ul>
+      <li><strong>Denominación:</strong> Talum Clínica Podológica</li>
+      <li><strong>Domicilio:</strong> Avenida Repelega 11, 48920 Portugalete, Bizkaia</li>
+      <li><strong>Teléfono:</strong> +34 681 800 118</li>
+      <li><strong>Actividad regulada:</strong> Podología (titulación universitaria oficial)</li>
+      <li><strong>Organismo supervisor:</strong> Colegio Oficial de Podólogos del País Vasco</li>
+      <li><strong>Normativa profesional:</strong> Decreto 31/2006 de autorización de centros y establecimientos sanitarios; Ley 44/2003 de ordenación de las profesiones sanitarias</li>
+    </ul>
+
+    <h3>2. Objeto y ámbito de aplicación</h3>
+    <p>Este aviso legal regula el acceso y uso del sitio web de Talum Clínica Podológica. El acceso implica la aceptación de estas condiciones. El titular se reserva el derecho de modificarlas en cualquier momento.</p>
+
+    <h3>3. Propiedad intelectual e industrial</h3>
+    <p>Todos los contenidos de este sitio web —textos, imágenes, logotipos, diseño gráfico y código fuente— son propiedad del titular o dispone de licencia para su uso. Queda prohibida su reproducción, distribución, comunicación pública o transformación sin autorización expresa y escrita.</p>
+
+    <h3>4. Responsabilidad</h3>
+    <p>El titular no garantiza la ausencia de virus u otros elementos dañinos. La información publicada tiene carácter orientativo y no sustituye en ningún caso la consulta presencial con un profesional sanitario. El titular no se responsabiliza del uso indebido que terceros puedan hacer de los contenidos.</p>
+
+    <h3>5. Hiperenlaces</h3>
+    <p>Los enlaces a terceros sitios web se proporcionan como servicio al usuario. El titular no controla ni es responsable de los contenidos externos enlazados.</p>
+
+    <h3>6. Legislación aplicable y jurisdicción</h3>
+    <p>Las presentes condiciones se rigen por la legislación española. Para la resolución de conflictos, las partes se someten a los Juzgados y Tribunales de Bilbao, salvo que la normativa de consumo establezca otro fuero.</p>
+  </div>
+</div>
+
+<!-- POLÍTICA DE PRIVACIDAD -->
+<div id="modal-privacidad" class="legal-modal" role="dialog" aria-modal="true" aria-labelledby="privacidad-title">
+  <div class="legal-modal-box">
+    <button class="legal-modal-close" onclick="closeModal('modal-privacidad')" aria-label="Cerrar">✕</button>
+    <h2 id="privacidad-title">Política de Privacidad</h2>
+
+    <p>En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y de la Ley Orgánica 3/2018 (LOPDGDD), le informamos del tratamiento de sus datos personales.</p>
+
+    <h3>1. Responsable del tratamiento</h3>
+    <ul>
+      <li><strong>Denominación:</strong> Talum Clínica Podológica</li>
+      <li><strong>Domicilio:</strong> Avenida Repelega 11, 48920 Portugalete, Bizkaia</li>
+      <li><strong>Teléfono:</strong> +34 681 800 118</li>
+      <li><strong>Contacto para datos:</strong> contacto a través del teléfono o WhatsApp indicados</li>
+    </ul>
+
+    <h3>2. Finalidades y base jurídica del tratamiento</h3>
+    <table class="legal-table">
+      <thead><tr><th>Finalidad</th><th>Base jurídica</th></tr></thead>
+      <tbody>
+        <tr><td>Gestión de citas y atención clínica</td><td>Ejecución de contrato / interés legítimo sanitario (art. 9.2.h RGPD)</td></tr>
+        <tr><td>Historia clínica y seguimiento del paciente</td><td>Obligación legal (Ley 41/2002 de autonomía del paciente)</td></tr>
+        <tr><td>Comunicaciones de respuesta a consultas</td><td>Interés legítimo / consentimiento</td></tr>
+        <tr><td>Facturación y obligaciones fiscales</td><td>Obligación legal (LIVA, LIS)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>3. Categorías de datos tratados</h3>
+    <p>Datos identificativos (nombre, teléfono), datos de salud (categoría especial según art. 9 RGPD, tratados únicamente para la prestación del servicio sanitario), y datos de contacto.</p>
+
+    <h3>4. Plazo de conservación</h3>
+    <p>La historia clínica se conserva como mínimo <strong>5 años</strong> desde la última asistencia, conforme a la normativa sanitaria vasca. Los datos de facturación se conservan <strong>6 años</strong> según el Código de Comercio. Transcurridos estos plazos, los datos serán suprimidos o anonimizados.</p>
+
+    <h3>5. Destinatarios</h3>
+    <p>No se ceden datos a terceros salvo obligación legal. El sistema de citas online (Clinicbai) actúa como encargado del tratamiento bajo contrato de confidencialidad y cumplimiento del RGPD.</p>
+
+    <h3>6. Transferencias internacionales</h3>
+    <p>No se realizan transferencias de datos fuera del Espacio Económico Europeo.</p>
+
+    <h3>7. Derechos del interesado</h3>
+    <p>Puede ejercer en cualquier momento los siguientes derechos dirigiéndose al responsable por los canales de contacto indicados, acompañando copia de su DNI:</p>
+    <ul>
+      <li><strong>Acceso:</strong> conocer qué datos se tratan sobre usted.</li>
+      <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+      <li><strong>Supresión:</strong> solicitar la eliminación de sus datos cuando ya no sean necesarios.</li>
+      <li><strong>Limitación:</strong> solicitar la suspensión del tratamiento en determinados supuestos.</li>
+      <li><strong>Portabilidad:</strong> recibir sus datos en formato estructurado y legible por máquina.</li>
+      <li><strong>Oposición:</strong> oponerse al tratamiento basado en interés legítimo.</li>
+    </ul>
+    <p>Tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (AEPD) — <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a> — si considera que el tratamiento no es conforme al RGPD.</p>
+
+    <h3>8. Seguridad</h3>
+    <p>Aplicamos medidas técnicas y organizativas adecuadas para garantizar la confidencialidad, integridad y disponibilidad de los datos personales, conforme al artículo 32 del RGPD.</p>
+  </div>
+</div>
+
+<!-- POLÍTICA DE COOKIES -->
+<div id="modal-cookies" class="legal-modal" role="dialog" aria-modal="true" aria-labelledby="cookies-title">
+  <div class="legal-modal-box">
+    <button class="legal-modal-close" onclick="closeModal('modal-cookies')" aria-label="Cerrar">✕</button>
+    <h2 id="cookies-title">Política de Cookies</h2>
+
+    <p>En cumplimiento del artículo 22.2 de la LSSI-CE y de la Guía de Cookies de la AEPD (actualización 2023), le informamos sobre el uso de cookies en este sitio web.</p>
+
+    <h3>1. ¿Qué son las cookies?</h3>
+    <p>Las cookies son pequeños archivos de texto que un sitio web almacena en su dispositivo cuando lo visita. Sirven para recordar preferencias, analizar el comportamiento de navegación o permitir funciones técnicas esenciales.</p>
+
+    <h3>2. Cookies que utiliza este sitio web</h3>
+    <table class="legal-table">
+      <thead><tr><th>Nombre</th><th>Tipo</th><th>Finalidad</th><th>Duración</th></tr></thead>
+      <tbody>
+        <tr><td>talum_cookie_consent</td><td>Técnica / propia</td><td>Guardar la preferencia de aceptación de cookies</td><td>12 meses</td></tr>
+        <tr><td>Fuente Google Fonts</td><td>Técnica / tercero</td><td>Carga de tipografías (Google LLC, EE.UU.)*</td><td>Sesión</td></tr>
+      </tbody>
+    </table>
+    <p><small>* Google Fonts realiza peticiones a servidores de Google. Puede implicar transferencia de datos a EE.UU. bajo las garantías del Marco de Privacidad UE-EE.UU. (Data Privacy Framework). Consulte la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</small></p>
+    <p>Este sitio web <strong>no utiliza cookies de análisis, publicidad ni seguimiento</strong> de terceros.</p>
+
+    <h3>3. Cómo gestionar las cookies</h3>
+    <p>Puede retirar su consentimiento en cualquier momento haciendo clic en el botón «Rechazar» del banner de cookies o configurando su navegador para bloquearlas:</p>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Chrome</a></li>
+      <li><a href="https://support.mozilla.org/es/kb/cookies-informacion-que-los-sitios-web-guardan-en-" target="_blank" rel="noopener noreferrer">Firefox</a></li>
+      <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+      <li><a href="https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener noreferrer">Edge</a></li>
+    </ul>
+    <p>La desactivación de cookies puede afectar a la funcionalidad del sitio.</p>
+
+    <h3>4. Actualizaciones de esta política</h3>
+    <p>Podemos actualizar esta política para adaptarla a cambios legislativos o técnicos. La fecha de última actualización es <strong>abril de 2025</strong>.</p>
+  </div>
+</div>
+
+<!-- BANNER DE COOKIES -->
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Aviso de cookies" style="display:none">
+  <div class="cookie-banner-text">
+    <strong>Este sitio usa cookies</strong> — únicamente cookies técnicas necesarias para su funcionamiento y Google Fonts. No usamos cookies de publicidad ni rastreo.
+    <button class="cookie-link" onclick="openModal('modal-cookies')">Más información</button>
+  </div>
+  <div class="cookie-banner-btns">
+    <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Aceptar</button>
+    <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Rechazar</button>
+  </div>
+</div>
+
+<!-- BOTÓN TAMAÑO DE LETRA -->
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<a href="https://wa.me/34681800118" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Contactar por WhatsApp" title="WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-float-label">WhatsApp</span>
+</a>
+
+<script>
+history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+const nav = document.getElementById("nav");
+window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", window.scrollY > 20); }, { passive: true });
+
+// Spotlight hover en service cards
+(function() {
+  const isTouchDevice = window.matchMedia('(hover: none)').matches;
+  if (!isTouchDevice) {
+    document.querySelectorAll('.service-item').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+        card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+      });
+    });
+  }
+})();
+
+// Scroll reveal
+(function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+})();
+/* ── PROGRESS BAR ── */
+(function () {
+  const bar = document.getElementById("progress-bar");
+  window.addEventListener("scroll", function () {
+    const docH = document.body.scrollHeight - window.innerHeight;
+    bar.style.width = (window.scrollY / docH * 100).toFixed(2) + "%";
+  }, { passive: true });
+})();
+
+/* ── HERO: VÍDEO CON SCROLL + BLUR ── */
+(function () {
+  const zone     = document.getElementById("hero-zone");
+  const heroBg   = document.getElementById("hero-bg");
+  const video    = document.getElementById("hero-video");
+  const SCRUB   = 4;
+  let ready     = false;
+  let startTime = 0;
+
+  function onMeta() {
+    ready     = true;
+    startTime = video.duration / 2;
+    /* play-pause-seek: necesario en iOS para desbloquear el seeking */
+    video.play()
+      .then(function () { video.pause(); video.currentTime = startTime; })
+      .catch(function () { video.currentTime = startTime; });
+  }
+  if (video.readyState >= 1) onMeta();
+  else video.addEventListener("loadedmetadata", onMeta, { once: true });
+
+  (function tick() {
+    const scrolled = Math.max(0, window.scrollY - zone.offsetTop);
+    const zoneH    = Math.max(1, zone.offsetHeight - window.innerHeight);
+    const p        = Math.min(1, scrolled / zoneH);
+
+    const blur  = 4 + p * 8;
+    const scale = 1.1 + p * 0.04;
+
+    heroBg.style.filter    = "blur(" + blur.toFixed(1) + "px)";
+    heroBg.style.transform = "scale(" + scale.toFixed(4) + ")";
+
+    if (ready && video.duration) {
+      var t = startTime + p * Math.min(SCRUB, video.duration - startTime);
+      if (Math.abs(video.currentTime - t) > 0.033) video.currentTime = t;
+    }
+
+    requestAnimationFrame(tick);
+  })();
+})();
+
+
+/* ── HORIZONTAL SCROLL SERVICIOS ── */
+(function () {
+  const section  = document.getElementById("servicios");
+  const track    = document.getElementById("hs-track");
+  const idxEl    = document.getElementById("hs-idx");
+  const fillEl   = document.getElementById("hs-progress-fill");
+  const PANELS   = 6;
+
+  function hsUpdate() {
+    const stickyTop = window.innerWidth <= 640 ? 68 : 0;
+    const scrolled  = window.scrollY - (section.offsetTop - stickyTop);
+    const maxScroll = section.offsetHeight - (window.innerHeight - stickyTop);
+    const progress  = Math.max(0, Math.min(1, scrolled / maxScroll));
+
+    track.style.transform = `translateX(${(-progress * (PANELS - 1) * window.innerWidth).toFixed(2)}px)`;
+
+    const idx = Math.min(PANELS, Math.round(progress * (PANELS - 1)) + 1);
+    idxEl.textContent = String(idx).padStart(2, "0");
+    fillEl.style.width = (progress * 100).toFixed(2) + "%";
+
+    requestAnimationFrame(hsUpdate);
+  }
+  hsUpdate();
+})();
+
+/* ── MODALES LEGALES ── */
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Cerrar al hacer clic fuera del contenido
+document.querySelectorAll('.legal-modal').forEach(modal => {
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal(modal.id);
+  });
+});
+// Cerrar con Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.legal-modal.open').forEach(m => closeModal(m.id));
+  }
+});
+
+/* ── BANNER COOKIES ── */
+(function () {
+  const banner = document.getElementById('cookie-banner');
+  const KEY = 'talum_cookie_consent';
+  if (!localStorage.getItem(KEY)) {
+    setTimeout(() => { banner.style.display = 'flex'; }, 800);
+  }
+})();
+
+function acceptCookies() {
+  localStorage.setItem('talum_cookie_consent', 'accepted');
+  hideBanner();
+}
+function rejectCookies() {
+  localStorage.setItem('talum_cookie_consent', 'rejected');
+  hideBanner();
+}
+function hideBanner() {
+  const b = document.getElementById('cookie-banner');
+  b.style.transition = 'transform .3s ease';
+  b.style.transform = 'translateY(100%)';
+  setTimeout(() => { b.style.display = 'none'; }, 320);
+}
+
+
+/* ── SCROLL TO TOP ── */
+(function () {
+  var btn = document.getElementById('scrollTop');
+  var threshold = window.innerHeight * 0.6;
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('visible', window.scrollY > threshold);
+  }, { passive: true });
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+/* ── HAMBURGUESA ── */
+(function () {
+  const burger = document.getElementById('nav-burger');
+  const mobileNav = document.getElementById('nav-mobile');
+  burger.addEventListener('click', () => {
+    const isOpen = burger.classList.toggle('open');
+    mobileNav.classList.toggle('open', isOpen);
+    burger.setAttribute('aria-expanded', String(isOpen));
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      burger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
+/* ── COMPROMISOS: TOPO CURSOR TRACKER ── */
+(function () {
+  function drawTopo(canvas, seed) {
+    var W = canvas.offsetWidth || 300;
+    var H = canvas.offsetHeight || 200;
+    canvas.width  = W;
+    canvas.height = H;
+    var ctx = canvas.getContext('2d');
+
+    /* two organic "peak" centers, varied per card */
+    var s = seed;
+    var centers = [
+      {
+        x: W * (0.22 + 0.14 * Math.sin(s * 1.4)),
+        y: H * (0.28 + 0.18 * Math.cos(s * 0.9)),
+        rx: W * 0.58,
+        ry: H * 0.50,
+      },
+      {
+        x: W * (0.68 + 0.12 * Math.cos(s * 1.8)),
+        y: H * (0.60 + 0.18 * Math.sin(s * 1.2)),
+        rx: W * 0.48,
+        ry: H * 0.42,
+      },
+    ];
+
+    var RINGS = 10;
+    var STEPS = 220;
+
+    centers.forEach(function (c, ci) {
+      for (var i = 1; i <= RINGS; i++) {
+        var t     = i / RINGS;
+        var alpha = 0.07 + 0.32 * (1 - t);
+        ctx.strokeStyle = 'rgba(194, 158, 120, ' + alpha.toFixed(3) + ')';
+        ctx.lineWidth   = 0.4 + (1 - t) * 0.9;
+
+        var ph1 = s * 0.7 + ci * 1.9 + i * 0.55;
+        var ph2 = s * 1.2 + ci * 0.8 + i * 1.3;
+        var ph3 = s * 0.3 + ci * 2.5 + i * 0.9;
+
+        ctx.beginPath();
+        for (var j = 0; j <= STEPS; j++) {
+          var a = (j / STEPS) * Math.PI * 2;
+          var w = 1
+            + 0.22 * Math.sin(3  * a + ph1)
+            + 0.13 * Math.sin(6  * a + ph2)
+            + 0.07 * Math.sin(11 * a + ph3)
+            + 0.04 * Math.sin(19 * a + ph1 + ph2);
+          var px = c.x + Math.cos(a) * c.rx * t * w;
+          var py = c.y + Math.sin(a) * c.ry * t * w;
+          if (j === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+        }
+        ctx.closePath();
+        ctx.stroke();
+      }
+    });
+  }
+
+  var cards = document.querySelectorAll('.compromiso');
+  var isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+  cards.forEach(function (card, idx) {
+    var canvas = document.createElement('canvas');
+    canvas.className = 'compromiso-topo';
+    card.appendChild(canvas);
+
+    /* draw after layout is done */
+    requestAnimationFrame(function () { drawTopo(canvas, idx + 1); });
+
+    if (!isTouchDevice) {
+      /* desktop: spotlight follows cursor */
+      card.addEventListener('mousemove', function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top)  + 'px');
+      }, { passive: true });
+    } else {
+      /* mobile: tap reveals / hides pattern at touch point */
+      card.addEventListener('click', function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top)  + 'px');
+        var wasActive = card.classList.contains('topo-active');
+        cards.forEach(function (c) { c.classList.remove('topo-active'); });
+        if (!wasActive) card.classList.add('topo-active');
+      });
+    }
+  });
+
+  window.addEventListener('resize', function () {
+    cards.forEach(function (card, idx) {
+      var canvas = card.querySelector('.compromiso-topo');
+      if (canvas) drawTopo(canvas, idx + 1);
+    });
+  }, { passive: true });
+})();
+</script>
+
+</body>
+</html>
