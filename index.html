@@ -2219,12 +2219,12 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="footer-nav-col">
       <div class="footer-nav-label">Servicios</div>
       <ul class="footer-nav-list">
-        <li><a href="#servicios">Quiropodología</a></li>
-        <li><a href="#servicios">Estudio de la pisada</a></li>
-        <li><a href="#servicios">Podología deportiva</a></li>
-        <li><a href="#servicios">Ecografía del pie</a></li>
-        <li><a href="#servicios">Hongos y papilomas</a></li>
-        <li><a href="#servicios">Asesoramiento en calzado</a></li>
+        <li><a href="#servicios" data-panel="0">Quiropodología</a></li>
+        <li><a href="#servicios" data-panel="1">Estudio de la pisada</a></li>
+        <li><a href="#servicios" data-panel="2">Podología deportiva</a></li>
+        <li><a href="#servicios" data-panel="3">Ecografía del pie</a></li>
+        <li><a href="#servicios" data-panel="4">Hongos y papilomas</a></li>
+        <li><a href="#servicios" data-panel="5">Asesoramiento en calzado</a></li>
       </ul>
     </div>
 
@@ -2527,6 +2527,24 @@ window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", windo
     requestAnimationFrame(hsUpdate);
   }
   hsUpdate();
+})();
+
+/* ── FOOTER: ENLACES A PANEL DE SERVICIO ── */
+(function () {
+  var section = document.getElementById('servicios');
+  var PANELS  = 6;
+
+  document.querySelectorAll('a[data-panel]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var idx       = parseInt(this.dataset.panel, 10);
+      var stickyTop = window.innerWidth <= 640 ? 68 : 0;
+      var maxScroll = section.offsetHeight - (window.innerHeight - stickyTop);
+      var progress  = idx / (PANELS - 1);
+      var targetY   = (section.offsetTop - stickyTop) + progress * maxScroll;
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    });
+  });
 })();
 
 /* ── MODALES LEGALES ── */
