@@ -1584,8 +1584,8 @@ img { max-width: 100%; height: auto; display: block; }
   overflow: hidden; background: var(--off);
 }
 @media (max-width: 640px) {
-  #servicios { height: calc(100svh + 5 * 90vh); }
-  .hs-sticky { top: 68px; height: calc(100svh - 68px); }
+  #servicios { height: calc(100dvh + 5 * 90vh); }
+  .hs-sticky { top: 68px; height: calc(100dvh - 68px); }
 }
 .hs-header {
   position: absolute; top: max(5rem,8vh); left: max(2rem,7vw);
@@ -2514,8 +2514,9 @@ window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", windo
 
   function hsUpdate() {
     const stickyTop = window.innerWidth <= 640 ? 68 : 0;
+    const vh        = window.innerHeight;
     const scrolled  = window.scrollY - (section.offsetTop - stickyTop);
-    const maxScroll = section.offsetHeight - (window.innerHeight - stickyTop);
+    const maxScroll = section.offsetHeight - (vh - stickyTop);
     const progress  = Math.max(0, Math.min(1, scrolled / maxScroll));
 
     track.style.transform = `translateX(${(-progress * (PANELS - 1) * window.innerWidth).toFixed(2)}px)`;
