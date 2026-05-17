@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pruebatalum.netlify.app/sitemap.xml
+Sitemap: https://talumpodologia.vercel.app/sitemap.xml
