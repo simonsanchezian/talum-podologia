@@ -2528,14 +2528,16 @@ window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", windo
   const zone     = document.getElementById("hero-zone");
   const heroBg   = document.getElementById("hero-bg");
   const video    = document.getElementById("hero-video");
-  const SCRUB   = 4;
-  let ready     = false;
-  let startTime = 0;
+  const SCRUB    = 4;
+  const LERP     = 0.1; // 0 = sin suavizado, 1 = sin lerp
+  let ready      = false;
+  let startTime  = 0;
+  let currentT   = 0;
 
   function onMeta() {
     ready     = true;
     startTime = video.duration / 2;
-    /* play-pause-seek: necesario en iOS para desbloquear el seeking */
+    currentT  = startTime;
     video.play()
       .then(function () { video.pause(); video.currentTime = startTime; })
       .catch(function () { video.currentTime = startTime; });
@@ -2555,8 +2557,9 @@ window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", windo
     heroBg.style.transform = "scale(" + scale.toFixed(4) + ")";
 
     if (ready && video.duration) {
-      var t = startTime + p * Math.min(SCRUB, video.duration - startTime);
-      if (Math.abs(video.currentTime - t) > 0.033) video.currentTime = t;
+      var targetT = startTime + p * Math.min(SCRUB, video.duration - startTime);
+      currentT   += (targetT - currentT) * LERP;
+      if (Math.abs(video.currentTime - currentT) > 0.016) video.currentTime = currentT;
     }
 
     requestAnimationFrame(tick);
