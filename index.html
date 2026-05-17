@@ -375,6 +375,9 @@ body::-webkit-scrollbar { display: none; }
 .scroll-top:hover { background: var(--slate-m); box-shadow: 0 6px 24px rgba(0,0,0,0.38); }
 .scroll-top svg { width: 20px; height: 20px; }
 @media (hover: none) { .scroll-top { width: 56px; border-radius: 50%; } }
+@media (max-width: 768px) {
+  .scroll-top { bottom: calc(96px + 70px + env(safe-area-inset-bottom)); }
+}
 
 /* ── BOTÓN FLOTANTE WHATSAPP ── */
 .wa-float {
@@ -1298,6 +1301,9 @@ footer {
   display: flex; align-items: center;
   justify-content: space-between; flex-wrap: wrap; gap: 0.8rem;
 }
+@media (max-width: 768px) {
+  .footer-bottom { padding-bottom: calc(5rem + env(safe-area-inset-bottom)); }
+}
 .footer-copy {
   font-size: 0.72rem; color: rgba(255,255,255,0.2);
   line-height: 1.6;
@@ -1628,8 +1634,14 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* WhatsApp flotante: en táctil solo el icono, sin etiqueta */
 @media (hover: none) {
-  .wa-float { width: 56px !important; border-radius: 50% !important; transition: box-shadow 0.2s !important; }
+  .wa-float { width: 56px !important; border-radius: 50% !important; transition: box-shadow 0.2s, bottom .35s cubic-bezier(.215,.61,.355,1) !important; }
   .wa-float-label { display: none !important; }
+}
+@media (max-width: 768px) {
+  .wa-float { transition: box-shadow 0.2s, bottom .35s cubic-bezier(.215,.61,.355,1) !important; }
+  .scroll-top { transition: opacity 0.35s cubic-bezier(0.22,1,0.36,1), transform 0.35s cubic-bezier(0.22,1,0.36,1), background 0.2s, box-shadow 0.2s, bottom .35s cubic-bezier(.215,.61,.355,1); }
+  body.bar-active .wa-float { bottom: calc(28px + 68px + env(safe-area-inset-bottom)) !important; }
+  body.bar-active .scroll-top { bottom: calc(96px + 68px + env(safe-area-inset-bottom)); }
 }
 
 /* ── HORIZONTAL SCROLL SERVICIOS ── */
@@ -2750,7 +2762,9 @@ function rejectCookies() { ckDeny(); }
   const hero = document.getElementById('hero-zone');
   window.addEventListener('scroll', function () {
     const threshold = (hero ? hero.offsetHeight : window.innerHeight) * 0.7;
-    bar.classList.toggle('visible', window.scrollY > threshold);
+    const show = window.scrollY > threshold;
+    bar.classList.toggle('visible', show);
+    document.body.classList.toggle('bar-active', show);
   }, { passive: true });
 })();
 
