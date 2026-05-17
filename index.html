@@ -1652,7 +1652,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 @media (max-width: 640px) {
   #servicios { height: calc(100dvh + 5 * 90vh); }
-  .hs-sticky { top: 68px; height: calc(100dvh - 68px); }
+  .hs-sticky { top: 68px; height: calc(100dvh - 68px - 70px - env(safe-area-inset-bottom)); }
 }
 .hs-header {
   position: absolute; top: max(5rem,8vh); left: max(2rem,7vw);
