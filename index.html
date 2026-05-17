@@ -159,11 +159,13 @@ body::-webkit-scrollbar { display: none; }
 .nav-cta {
   background: var(--terra);
   color: var(--white) !important;
-  padding: 0.55rem 1.4rem;
+  padding: 0.4rem 1rem;
   border-radius: 4px;
+  font-size: 0.75rem !important;
   text-transform: uppercase !important;
   font-weight: 500 !important;
   letter-spacing: 0.06em !important;
+  text-decoration: none !important;
   transition: background 0.2s !important;
 }
 .nav-cta:hover { background: var(--slate) !important; }
@@ -1388,43 +1390,109 @@ footer {
 }
 
 /* ── BANNER COOKIES ── */
-.cookie-banner {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 8000;
-  background: var(--night);
-  border-top: 1px solid rgba(255,255,255,.08);
-  padding: 1.2rem 4vw;
+/* ── COOKIE MODAL ── */
+.ck-overlay {
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(0,0,0,.45);
+  display: flex; align-items: flex-end; justify-content: center;
+  padding: 0;
+  animation: ckFadeIn .25s ease both;
+}
+@keyframes ckFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@media (min-width: 560px) {
+  .ck-overlay { align-items: center; padding: 1.5rem; }
+}
+.ck-modal {
+  background: #fff;
+  width: 100%; max-width: 640px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 8px 48px rgba(0,0,0,.22);
+  overflow: hidden;
+  animation: ckSlideUp .3s cubic-bezier(.215,.61,.355,1) both;
+  font-family: var(--sans);
+  max-height: 92dvh;
+  display: flex; flex-direction: column;
+}
+@keyframes ckSlideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@media (min-width: 560px) {
+  .ck-modal { border-radius: 12px; max-height: 88vh; }
+}
+.ck-tabs {
+  display: flex; border-bottom: 1px solid #e8e8e8;
+  flex-shrink: 0;
+}
+.ck-tab {
+  flex: 1; padding: .9rem .5rem;
+  font-size: .92rem; font-weight: 600;
+  color: #555; background: none; border: none; cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+  font-family: var(--sans);
+}
+.ck-tab.active { color: var(--slate); border-bottom-color: var(--terra); }
+.ck-body { padding: 1.5rem 1.5rem 0; overflow-y: auto; flex: 1; }
+@media (min-width: 560px) { .ck-body { padding: 2rem 2.5rem 0; } }
+.ck-title {
+  font-size: 1.1rem; font-weight: 700; color: var(--ink);
+  margin-bottom: .85rem;
+}
+.ck-text {
+  font-size: .95rem; line-height: 1.7; color: #555;
+  margin-bottom: .65rem;
+}
+.ck-panel { display: none; }
+.ck-panel.active { display: block; }
+/* Detalles toggles */
+.ck-cat {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.ck-cat:last-child { border-bottom: none; }
+.ck-cat-header {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 1.5rem; flex-wrap: wrap;
-  animation: slideUp .35s cubic-bezier(.215,.61,.355,1) both;
+  margin-bottom: .45rem;
 }
-@keyframes slideUp {
-  from { transform: translateY(100%); }
-  to   { transform: translateY(0); }
+.ck-cat-name { font-size: 1rem; font-weight: 700; color: var(--ink); }
+.ck-cat-desc { font-size: .9rem; line-height: 1.65; color: #777; }
+/* Toggle switch */
+.ck-toggle { position: relative; width: 44px; height: 26px; flex-shrink: 0; }
+.ck-toggle input { opacity: 0; width: 0; height: 0; }
+.ck-toggle-slider {
+  position: absolute; inset: 0;
+  background: #ccc; border-radius: 26px;
+  cursor: pointer; transition: background .2s;
 }
-.cookie-banner-text {
-  font-size: .83rem; color: rgba(255,255,255,.6); line-height: 1.6;
-  max-width: 680px;
+.ck-toggle-slider::before {
+  content: ''; position: absolute;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #fff; left: 3px; bottom: 3px;
+  transition: transform .2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
-.cookie-banner-text strong { color: rgba(255,255,255,.85); }
-.cookie-link {
-  background: none; border: none; cursor: pointer;
-  color: var(--terra-l); font-size: .83rem;
-  font-family: var(--sans); text-decoration: underline;
-  padding: 0; margin-left: .4rem;
+.ck-toggle input:checked + .ck-toggle-slider { background: var(--slate); }
+.ck-toggle input:checked + .ck-toggle-slider::before { transform: translateX(18px); }
+.ck-toggle input:disabled + .ck-toggle-slider { opacity: .5; cursor: not-allowed; }
+/* Botones */
+.ck-footer {
+  padding: 1rem 1.5rem 1.2rem;
+  display: flex; gap: .6rem; flex-shrink: 0;
+  border-top: 1px solid #f0f0f0;
 }
-.cookie-banner-btns { display: flex; gap: .7rem; flex-shrink: 0; }
-.cookie-btn {
-  padding: .55rem 1.3rem; border-radius: 4px;
-  font-size: .82rem; font-weight: 500;
-  font-family: var(--sans); cursor: pointer; border: none;
-  transition: opacity .2s, transform .15s;
+@media (min-width: 560px) { .ck-footer { padding: 1.2rem 2.5rem 1.6rem; } }
+.ck-btn {
+  flex: 1; padding: .8rem .5rem;
+  border-radius: 6px; border: none; cursor: pointer;
+  font-family: var(--sans); font-size: .9rem; font-weight: 600;
+  transition: opacity .18s, transform .15s;
 }
-.cookie-btn:hover { opacity: .88; transform: translateY(-1px); }
-.cookie-btn-accept { background: var(--terra); color: var(--white); }
-.cookie-btn-reject {
-  background: transparent; color: rgba(255,255,255,.5);
-  border: 1px solid rgba(255,255,255,.2);
-}
+.ck-btn:hover { opacity: .88; transform: translateY(-1px); }
+.ck-btn-deny { background: var(--slate); color: #fff; }
+.ck-btn-custom { background: var(--slate); color: #fff; }
+.ck-btn-accept { background: var(--terra); color: #fff; }
+@media (max-width: 380px) { .ck-btn { font-size: .78rem; padding: .7rem .3rem; } }
 
 /* ── SCROLL REVEAL ── */
 .reveal {
@@ -2345,14 +2413,55 @@ img { max-width: 100%; height: auto; display: block; }
 </div>
 
 <!-- BANNER DE COOKIES -->
-<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Aviso de cookies" style="display:none">
-  <div class="cookie-banner-text">
-    <strong>Este sitio usa cookies</strong> — únicamente cookies técnicas necesarias para su funcionamiento y Google Fonts. No usamos cookies de publicidad ni rastreo.
-    <button class="cookie-link" onclick="openModal('modal-cookies')">Más información</button>
-  </div>
-  <div class="cookie-banner-btns">
-    <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Aceptar</button>
-    <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Rechazar</button>
+<div id="cookie-banner" class="ck-overlay" role="dialog" aria-modal="true" aria-label="Aviso de cookies" style="display:none">
+  <div class="ck-modal">
+    <!-- Tabs -->
+    <div class="ck-tabs">
+      <button class="ck-tab active" onclick="ckTab('consentir')">Consentir</button>
+      <button class="ck-tab" onclick="ckTab('detalles')">Detalles</button>
+      <button class="ck-tab" onclick="ckTab('info')">Sobre las Cookies</button>
+    </div>
+    <!-- Panel 1: Consentir -->
+    <div class="ck-body">
+      <div id="ck-consentir" class="ck-panel active">
+        <p class="ck-title">Este sitio web utiliza cookies</p>
+        <p class="ck-text">Utilizamos cookies técnicas necesarias para el funcionamiento del sitio y Google Fonts para la tipografía. No usamos cookies de publicidad, rastreo ni análisis de terceros.</p>
+        <p class="ck-text">Puede aceptar todas las cookies, rechazarlas o personalizar su elección en la pestaña «Detalles».</p>
+      </div>
+      <!-- Panel 2: Detalles -->
+      <div id="ck-detalles" class="ck-panel">
+        <div class="ck-cat">
+          <div class="ck-cat-header">
+            <span class="ck-cat-name">Necesarias</span>
+            <label class="ck-toggle"><input type="checkbox" checked disabled><span class="ck-toggle-slider"></span></label>
+          </div>
+          <p class="ck-cat-desc">Las cookies necesarias permiten funciones básicas como la navegación y el guardado de preferencias. El sitio no puede funcionar correctamente sin ellas.</p>
+        </div>
+        <div class="ck-cat">
+          <div class="ck-cat-header">
+            <span class="ck-cat-name">Tipografía (Google Fonts)</span>
+            <label class="ck-toggle"><input type="checkbox" id="ck-fonts" checked><span class="ck-toggle-slider"></span></label>
+          </div>
+          <p class="ck-cat-desc">Google Fonts carga las fuentes tipográficas del sitio. Implica una conexión con los servidores de Google que puede registrar su dirección IP.</p>
+        </div>
+        <div class="ck-cat">
+          <div class="ck-cat-header">
+            <span class="ck-cat-name">Análisis y Márketing</span>
+            <label class="ck-toggle"><input type="checkbox" id="ck-analytics"><span class="ck-toggle-slider"></span></label>
+          </div>
+          <p class="ck-cat-desc">Actualmente este sitio no utiliza cookies de análisis ni publicidad. Si en el futuro se incorporan, se le informará y pedirá su consentimiento.</p>
+        </div>
+      </div>
+      <!-- Panel 3: Sobre las Cookies -->
+      <div id="ck-info" class="ck-panel">
+        <p class="ck-text">Las cookies son pequeños archivos de texto que los sitios web almacenan en su dispositivo para mejorar la experiencia de usuario.</p>
+        <p class="ck-text">La ley establece que podemos almacenar cookies estrictamente necesarias sin su permiso. Para el resto, necesitamos su consentimiento según el artículo 6 (1) (a) del RGPD.</p>
+        <p class="ck-text">Puede retirar su consentimiento en cualquier momento desde el enlace «Política de cookies» en el pie de página.</p>
+      </div>
+    </div>
+    <!-- Botones -->
+    <div class="ck-footer" id="ck-footer-consentir">
+    </div>
   </div>
 </div>
 
@@ -2532,29 +2641,62 @@ document.addEventListener('keydown', e => {
   }
 });
 
-/* ── BANNER COOKIES ── */
+/* ── COOKIE MODAL ── */
 (function () {
-  const banner = document.getElementById('cookie-banner');
   const KEY = 'talum_cookie_consent';
   if (!localStorage.getItem(KEY)) {
-    setTimeout(() => { banner.style.display = 'flex'; }, 800);
+    setTimeout(() => {
+      document.getElementById('cookie-banner').style.display = 'flex';
+      ckRenderFooter('consentir');
+    }, 800);
   }
 })();
 
-function acceptCookies() {
+function ckTab(name) {
+  document.querySelectorAll('.ck-tab').forEach((t, i) => {
+    t.classList.toggle('active', ['consentir','detalles','info'][i] === name);
+  });
+  document.querySelectorAll('.ck-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('ck-' + name).classList.add('active');
+  ckRenderFooter(name);
+}
+
+function ckRenderFooter(tab) {
+  const f = document.getElementById('ck-footer-consentir');
+  if (tab === 'detalles') {
+    f.innerHTML = `
+      <button class="ck-btn ck-btn-deny" onclick="ckDeny()">Denegar</button>
+      <button class="ck-btn ck-btn-custom" onclick="ckSaveCustom()">Permitir seleccionadas</button>
+      <button class="ck-btn ck-btn-accept" onclick="ckAccept()">Permitir todas</button>`;
+  } else {
+    f.innerHTML = `
+      <button class="ck-btn ck-btn-deny" onclick="ckDeny()">Denegar</button>
+      <button class="ck-btn ck-btn-custom" onclick="ckTab('detalles')">Personalizar</button>
+      <button class="ck-btn ck-btn-accept" onclick="ckAccept()">Permitir todas</button>`;
+  }
+}
+
+function ckAccept() {
   localStorage.setItem('talum_cookie_consent', 'accepted');
-  hideBanner();
+  ckHide();
 }
-function rejectCookies() {
+function ckDeny() {
   localStorage.setItem('talum_cookie_consent', 'rejected');
-  hideBanner();
+  ckHide();
 }
-function hideBanner() {
+function ckSaveCustom() {
+  const val = document.getElementById('ck-analytics').checked ? 'accepted' : 'partial';
+  localStorage.setItem('talum_cookie_consent', val);
+  ckHide();
+}
+function ckHide() {
   const b = document.getElementById('cookie-banner');
-  b.style.transition = 'transform .3s ease';
-  b.style.transform = 'translateY(100%)';
-  setTimeout(() => { b.style.display = 'none'; }, 320);
+  b.style.transition = 'opacity .25s ease';
+  b.style.opacity = '0';
+  setTimeout(() => { b.style.display = 'none'; b.style.opacity = ''; }, 260);
 }
+function acceptCookies() { ckAccept(); }
+function rejectCookies() { ckDeny(); }
 
 
 /* ── SCROLL TO TOP ── */
