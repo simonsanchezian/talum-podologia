@@ -2525,19 +2525,18 @@ window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", windo
 
 /* ── HERO: VÍDEO CON SCROLL + BLUR ── */
 (function () {
-  const zone     = document.getElementById("hero-zone");
-  const heroBg   = document.getElementById("hero-bg");
-  const video    = document.getElementById("hero-video");
-  const SCRUB    = 4;
-  const LERP     = 0.1; // 0 = sin suavizado, 1 = sin lerp
-  let ready      = false;
-  let startTime  = 0;
-  let currentT   = 0;
+  const zone    = document.getElementById("hero-zone");
+  const heroBg  = document.getElementById("hero-bg");
+  const video   = document.getElementById("hero-video");
+  const SCRUB   = 4;
+  const LERP    = 0.18;
+  let ready     = false;
+  let startTime = 0;
+  let smoothP   = 0;
 
   function onMeta() {
     ready     = true;
     startTime = video.duration / 2;
-    currentT  = startTime;
     video.play()
       .then(function () { video.pause(); video.currentTime = startTime; })
       .catch(function () { video.currentTime = startTime; });
@@ -2548,18 +2547,16 @@ window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", windo
   (function tick() {
     const scrolled = Math.max(0, window.scrollY - zone.offsetTop);
     const zoneH    = Math.max(1, zone.offsetHeight - window.innerHeight);
-    const p        = Math.min(1, scrolled / zoneH);
+    const targetP  = Math.min(1, scrolled / zoneH);
 
-    const blur  = 4 + p * 8;
-    const scale = 1.1 + p * 0.04;
+    smoothP += (targetP - smoothP) * LERP;
 
-    heroBg.style.filter    = "blur(" + blur.toFixed(1) + "px)";
-    heroBg.style.transform = "scale(" + scale.toFixed(4) + ")";
+    heroBg.style.filter    = "blur(" + (4 + smoothP * 8).toFixed(1) + "px)";
+    heroBg.style.transform = "scale(" + (1.1 + smoothP * 0.04).toFixed(4) + ")";
 
-    if (ready && video.duration) {
-      var targetT = startTime + p * Math.min(SCRUB, video.duration - startTime);
-      currentT   += (targetT - currentT) * LERP;
-      if (Math.abs(video.currentTime - currentT) > 0.016) video.currentTime = currentT;
+    if (ready && video.duration && !video.seeking) {
+      var t = startTime + smoothP * Math.min(SCRUB, video.duration - startTime);
+      if (Math.abs(video.currentTime - t) > 0.02) video.currentTime = t;
     }
 
     requestAnimationFrame(tick);
