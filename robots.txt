@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://talumpodologia.vercel.app/sitemap.xml
+Sitemap: https://www.podologiaportugalete.es/sitemap.xml
