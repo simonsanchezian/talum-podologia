@@ -1585,22 +1585,18 @@ img { max-width: 100%; height: auto; display: block; }
   .nav { display: flex; justify-content: space-between; }
   .nav-tel-icon { display: flex; }
   .nav-cta-right { display: none; }
-  #hero-zone { height: 100svh; }
-  #hero-sticky { height: 100%; }
-  #video-overlay { justify-content: flex-start; padding: 80px 2rem 2rem; }
-  .hero-logo { height: 80px; margin-bottom: .5rem; }
-  .v-sub { font-size: .8rem; line-height: 1.5; margin-bottom: .6rem; }
-  .v-btn-primary, .v-btn-wa { padding: .6rem 1.6rem; font-size: .82rem; }
+  #hero-zone { height: auto; min-height: 100svh; }
+  #hero-sticky { min-height: 100svh; }
+  #video-overlay { position: relative; min-height: 100svh; justify-content: flex-start; padding: 80px 2rem 2rem; box-sizing: border-box; }
+  .hero-logo { height: 100px; margin-bottom: .5rem; }
   .hero-bg-img { object-position: 25% center; }
   .v-btns { flex-direction: column; align-items: center; gap: .6rem; }
   .v-title { font-size: clamp(2rem, 9vw, 3rem); margin-bottom: .7rem; }
   .v-eyebrow { margin-bottom: .3rem; font-size: .65rem; }
-  .hero-logo { height: 100px; margin-bottom: .8rem; }
-  .v-sub { font-size: .8rem; line-height: 1.5; margin-bottom: .8rem; }
   .hero-brand-side, .hero-brand-line { display: none; }
   .hero-brand-row { margin-bottom: .7rem; }
-  .v-sub { font-size: .84rem; line-height: 1.6; margin-bottom: 1rem; }
-  .v-btn-primary, .v-btn-wa { padding: .72rem 1.8rem; font-size: .85rem; }
+  .v-sub { font-size: .82rem; line-height: 1.5; margin-bottom: .8rem; }
+  .v-btn-primary, .v-btn-wa { padding: .65rem 1.6rem; font-size: .84rem; }
   .scroll-hint { display: none !important; }
   /* Marquee: reducir tamaño en móvil */
   .talum-marquee__track { font-size: clamp(1.4rem, 7vw, 2rem); }
