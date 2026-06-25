@@ -126,9 +126,15 @@ body::-webkit-scrollbar { display: none; }
 .nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.25); }
 
 .nav-logo {
-  display: flex; align-items: baseline; gap: 0.5rem;
+  display: flex; align-items: center; gap: 0.5rem;
   text-decoration: none; justify-self: start;
 }
+.nav-logo-img {
+  height: 16px; width: auto;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s;
+}
+.nav-subtitles { display: none; }
 .nav-logo-main {
   font-family: var(--serif);
   font-size: 1.35rem; font-weight: 700;
@@ -345,6 +351,9 @@ body::-webkit-scrollbar { display: none; }
   .nav { display: flex; justify-content: space-between; }
   .nav-tel-icon { display: flex; }
   .nav-cta-right { display: none; }
+  .nav-subtitles { display: flex; flex-direction: column; align-items: center; gap: 2px; position: absolute; left: 50%; transform: translateX(-50%); }
+  .nav-subtitle-img { height: 8px; width: auto; filter: brightness(0) invert(1); opacity: 0.7; }
+  .nav-subtitle-right { height: 7px; }
 }
 
 /* ── BOTÓN SUBIR ARRIBA ── */
@@ -1252,12 +1261,11 @@ footer {
   margin-bottom: 1rem;
 }
 .footer-brand-icon {
-  width: 36px; height: 36px; border-radius: 8px;
-  background: var(--terra);
+  width: 40px; height: 40px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
-.footer-brand-icon svg { width: 18px; height: 18px; }
+.footer-logo-img { width: 100%; height: 100%; object-fit: contain; filter: brightness(0) invert(1); }
 .footer-brand-name {
   font-family: var(--serif); font-size: 1.05rem;
   font-weight: 700; color: rgba(255,255,255,0.85);
@@ -1583,6 +1591,8 @@ img { max-width: 100%; height: auto; display: block; }
   .v-btns { flex-direction: column; align-items: center; gap: .6rem; }
   .v-title { font-size: clamp(2rem, 9vw, 3rem); margin-bottom: .7rem; }
   .v-eyebrow { margin-bottom: .5rem; }
+  .hero-brand-side, .hero-brand-line { display: none; }
+  .hero-brand-row { margin-bottom: .7rem; }
   .v-sub { font-size: .84rem; line-height: 1.6; margin-bottom: 1rem; }
   .v-btn-primary, .v-btn-wa { padding: .72rem 1.8rem; font-size: .85rem; }
   .scroll-hint { display: none !important; }
@@ -1771,6 +1781,12 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; padding: 2rem;
 }
+.hero-logo { height: 120px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1.2rem; opacity: 0.92; }
+.hero-brand-row { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.4rem; width: 100%; justify-content: center; }
+.hero-brand-side { width: 120px; height: auto; filter: brightness(0) invert(1); opacity: 0.6; flex-shrink: 0; }
+.hero-brand-right { width: 105px; }
+.hero-brand-line { width: 40px; height: 1px; background: rgba(255,255,255,0.25); flex-shrink: 0; }
+.hero-brand-row .v-title { margin-bottom: 0; }
 .v-eyebrow { font-size: .72rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--terra-l); margin-bottom: 1.2rem; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
 .v-title { font-family: var(--serif); font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 700; color: var(--white); line-height: 1.08; margin-bottom: 1.4rem; max-width: 800px; letter-spacing: -.02em; text-shadow: 0 4px 24px rgba(0,0,0,0.75), 0 1px 6px rgba(0,0,0,0.5); }
 .v-title em { font-style: italic; color: var(--terra-l); }
@@ -1792,7 +1808,11 @@ img { max-width: 100%; height: auto; display: block; }
 <div id="progress-bar"></div>
 
 <nav class="nav" id="nav">
-  <a href="#" class="nav-logo"><span class="nav-logo-main">Talum</span></a>
+  <a href="#" class="nav-logo"><img src="assets/talum-logo.webp" alt="Talum" class="nav-logo-img" width="120" height="23"></a>
+  <div class="nav-subtitles">
+    <img src="assets/clinica_del_pie.webp" alt="Clínica del pie" class="nav-subtitle-img">
+    <img src="assets/oin_klinika.webp" alt="Oin Klinika" class="nav-subtitle-img nav-subtitle-right">
+  </div>
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#equipo">Quiénes somos</a></li>
@@ -1827,8 +1847,15 @@ img { max-width: 100%; height: auto; display: block; }
     <video id="hero-video" src="assets/hero.mp4" preload="auto" muted playsinline></video>
   </div>
   <div id="video-overlay">
+    <img src="assets/logo-oficial.webp" alt="Talum Clínica Podológica" class="hero-logo" width="146" height="300">
     <h1 class="v-eyebrow">Podólogo en Portugalete · Avenida Repelega 11</h1>
-    <p class="v-title">Hay dolores<br>que se aprenden<br>a <em>ignorar.</em></p>
+    <div class="hero-brand-row">
+      <img src="assets/clinica_del_pie.webp" alt="Clínica del pie" class="hero-brand-side">
+      <span class="hero-brand-line"></span>
+      <p class="v-title">Hay dolores<br>que se aprenden<br>a <em>ignorar.</em></p>
+      <span class="hero-brand-line"></span>
+      <img src="assets/oin_klinika.webp" alt="Oin Klinika" class="hero-brand-side hero-brand-right">
+    </div>
     <p class="v-sub">No deberías acostumbrarte al dolor. Y no tienes que hacerlo. Si algo duele al caminar, normalmente hay una causa. Y en la mayoría de los casos, tiene solución.</p>
     <div class="v-btns">
       <a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="v-btn-primary">Pedir cita &rarr;</a>
@@ -2256,14 +2283,11 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="footer-brand-col">
       <div class="footer-brand-logo">
         <div class="footer-brand-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2C8 2 5 5.5 5 9c0 5 7 13 7 13s7-8 7-13c0-3.5-3-7-7-7z"/>
-            <circle cx="12" cy="9" r="2.5" fill="white" stroke="none"/>
-          </svg>
+          <img src="assets/logo-oficial.webp" alt="Talum" class="footer-logo-img">
         </div>
         <a href="#" class="footer-brand-name">
           Talum
-          <small>Clínica Podológica</small>
+          <small>Clínica del pie · Oin Klinika</small>
         </a>
       </div>
       <p class="footer-tagline">Avenida Repelega 11<br>48920 Portugalete, Bizkaia<br>Más de 40 años en el barrio.</p>
