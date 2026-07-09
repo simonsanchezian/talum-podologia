@@ -57,7 +57,7 @@
       "closes": "20:00"
     }
   ],
-  "hasMap": "https://maps.google.com/maps?q=Floristeria+Kiara+Repelega+Portugalete",
+  "hasMap": "https://maps.app.goo.gl/tCkEUbnARK4ojhz6A",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Avenida Repelega 11",
@@ -73,7 +73,7 @@
   },
   "sameAs": [
     "https://wa.me/34681800118",
-    "https://maps.google.com/maps?q=Floristeria+Kiara+Repelega+Portugalete"
+    "https://maps.app.goo.gl/tCkEUbnARK4ojhz6A"
   ]
 }
 </script>
@@ -598,6 +598,7 @@ body.big-text .faq-summary       { font-size: 1.12rem; }
   margin-bottom: 2rem;
 }
 .sec-lead.on-dark { color: rgba(255,255,255,0.55); }
+#compromisos .sec-lead { max-width: 100%; }
 
 /* ── PROBLEMAS ── */
 #problemas { background: var(--sand); }
@@ -612,13 +613,10 @@ body.big-text .faq-summary       { font-size: 1.12rem; }
 
 .problem-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem;
 }
-@media (max-width: 1024px) and (min-width: 641px) {
-  .problem-grid { grid-template-columns: repeat(2, 1fr); }
-  .problem-grid > :last-child { grid-column: 1 / -1; }
-}
+.problem-grid > :last-child { grid-column: 1 / -1; }
 
 .problem-card {
   border-radius: 22px;
@@ -921,18 +919,23 @@ body.big-text .faq-summary       { font-size: 1.12rem; }
 
 /* ── PRIMERA VISITA ── */
 #primera-visita { background: var(--sand); }
-.visit-layout {
+.pv-header {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 6rem; align-items: center;
+  gap: 4rem; align-items: end;
+  margin-bottom: 3rem;
 }
-.steps { display: flex; flex-direction: column; gap: 0; margin-top: 2rem; }
+.pv-header .sec-title { margin-bottom: 0; }
+.pv-header .sec-lead  { max-width: 100%; margin-bottom: 0; }
+.pv-subtitle { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--terra); margin-bottom: 0.75rem; }
+.steps { display: grid; grid-template-columns: 1fr 1fr; column-gap: 5rem; }
 .step {
   display: grid; grid-template-columns: 48px 1fr;
   gap: 1.5rem; padding: 1.8rem 0;
   border-top: 1px solid rgba(27,42,59,0.07);
   align-items: start;
+  align-content: start;
 }
-.step:last-child { border-bottom: 1px solid rgba(27,42,59,0.07); }
+.step:nth-last-child(-n+2) { border-bottom: 1px solid rgba(27,42,59,0.07); }
 .step-num {
   width: 48px; height: 48px;
   border: 1.5px solid rgba(27,42,59,0.12);
@@ -1138,11 +1141,8 @@ body.big-text .faq-summary       { font-size: 1.12rem; }
 
 /* ── UBICACIÓN ── */
 #ubicacion { background: var(--sand); }
-.ubicacion-layout {
-  display: grid; grid-template-columns: 1fr 2fr;
-  gap: 4rem; align-items: center;
-}
-.info-blocks { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+.ubicacion-layout { display: flex; flex-direction: column; gap: 2rem; }
+.info-blocks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 .info-block {
   padding: 1.4rem 1.6rem;
   background: var(--sand-d);
@@ -1566,9 +1566,11 @@ footer {
     border-top: 1px solid rgba(27,42,59,0.06);
   }
   .family-block { grid-column: span 1; grid-template-columns: 1fr; gap: 1.5rem; }
-  .visit-layout { grid-template-columns: 1fr; gap: 3rem; }
-  .visit-promise { margin-top: 0; }
-  .ubicacion-layout { grid-template-columns: 1fr; }
+  .pv-header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .steps { grid-template-columns: 1fr; }
+  .step:nth-last-child(-n+2) { border-bottom: none; }
+  .step:last-child { border-bottom: 1px solid rgba(27,42,59,0.07); }
+  .info-blocks { grid-template-columns: 1fr; }
   .problem-grid  { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
 }
@@ -1694,12 +1696,12 @@ img { max-width: 100%; height: auto; display: block; }
 .hs-panel-content { max-width: min(500px,46vw); position: relative; z-index: 1; }
 .hs-panel-name {
   font-family: var(--serif); font-weight: 700; line-height: 1.1;
-  font-size: clamp(2rem,4.5vw,3.8rem);
+  font-size: clamp(2.4rem,5.5vw,4.8rem);
   color: var(--ink); margin-bottom: 1.4rem; letter-spacing: -.02em;
 }
 .hs-panel-name em { font-style: italic; color: var(--terra); }
 .hs-panel-desc {
-  font-size: clamp(.9rem,1.25vw,1.05rem); color: var(--slate-m);
+  font-size: clamp(1rem,1.5vw,1.25rem); color: var(--slate-m);
   line-height: 1.8;
 }
 /* Imagen derecha con máscara de degradado */
@@ -1773,7 +1775,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-brand-line { width: 40px; height: 1px; background: rgba(255,255,255,0.25); flex-shrink: 0; }
 .hero-brand-row .v-title { margin-bottom: 0; }
 .v-eyebrow { font-size: .72rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--terra-l); margin-bottom: 1.2rem; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
-.v-title { font-family: var(--serif); font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 700; color: var(--white); line-height: 1.08; margin-bottom: 1.4rem; max-width: 800px; letter-spacing: -.02em; text-shadow: 0 4px 24px rgba(0,0,0,0.75), 0 1px 6px rgba(0,0,0,0.5); }
+.v-title { font-family: var(--serif); font-size: clamp(2.7rem, 5.8vw, 5.2rem); font-weight: 700; color: var(--white); line-height: 1.08; margin-bottom: 1.4rem; max-width: 800px; letter-spacing: -.02em; text-shadow: 0 4px 24px rgba(0,0,0,0.75), 0 1px 6px rgba(0,0,0,0.5); }
 .v-title em { font-style: italic; color: var(--terra-l); }
 .v-sub { font-size: clamp(.95rem, 1.6vw, 1.15rem); color: rgba(255,255,255,.78); max-width: 540px; margin-bottom: 2.5rem; font-weight: 300; line-height: 1.75; text-shadow: 0 2px 14px rgba(0,0,0,0.65); }
 .v-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
@@ -1854,11 +1856,11 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="hero-brand-row">
       <img src="assets/clinica_del_pie.webp" alt="Clínica del pie" class="hero-brand-side">
       <span class="hero-brand-line"></span>
-      <p class="v-title">Hay dolores<br>que se aprenden<br>a <em>ignorar.</em></p>
+      <p class="v-title">El dolor al caminar<br>no debería formar<br>parte de tu <em>rutina.</em></p>
       <span class="hero-brand-line"></span>
       <img src="assets/oin_klinika.webp" alt="Oin Klinika" class="hero-brand-side hero-brand-right">
     </div>
-    <p class="v-sub">No deberías acostumbrarte al dolor. Y no tienes que hacerlo. Si algo duele al caminar, normalmente hay una causa. Y en la mayoría de los casos, tiene solución.</p>
+    <p class="v-sub">Muchas personas conviven con molestias en los pies porque creen que son inevitables. Pero el dolor tiene una causa y se puede tratar. En Clínica del pie TALUM identificamos el origen del problema para ayudarte a recuperar la salud de tus pies y reducir el dolor.</p>
     <div class="v-btns">
       <a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="v-btn-primary">Pedir cita &rarr;</a>
       <a href="https://wa.me/34681800118?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20y%20cita%20en%20Talum." target="_blank" rel="noopener noreferrer" class="v-btn-wa"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
@@ -1868,54 +1870,65 @@ img { max-width: 100%; height: auto; display: block; }
   </div>
 </section>
 
-<div class="strip">
-  <div class="strip-inner">
-    <p class="strip-quote">"No somos ninguna franquicia. No somos una clínica de paso. Somos un proyecto de barrio — y lo tratamos como tal."</p>
-    <p class="strip-attr">Más de 40 años en Repelega · Cuarta generación</p>
-  </div>
-</div>
-
 <!-- PROBLEMAS -->
 <section class="sec" id="problemas">
-  <div class="eyebrow reveal">¿Te identificas?</div>
-  <h2 class="sec-title reveal reveal-d1">Si has llegado hasta aquí,<br>probablemente te pasa <em>algo de esto</em></h2>
-  <p class="sec-lead reveal reveal-d2">El callo que duele pero "tampoco es para tanto". La uña que lleva meses molestando. Poco a poco te acostumbras. Pero no deberías hacerlo.</p>
 
+  <h2 class="sec-title reveal reveal-d1">Si has llegado hasta aquí,<br>probablemente te pasa <em>algo de esto</em></h2>
   <div class="problem-cat reveal">Uñas, durezas y callos</div>
   <div class="problem-grid">
     <div class="problem-card dark reveal reveal-d1" data-n="01">
-      <p class="pc-q">Llevo meses con este callo y ya no sé cómo andar</p>
-      <span class="pc-label">Lo que hacemos</span>
-      <p class="pc-a">Eliminamos la lesión de forma indolora y analizamos por qué ha aparecido, para evitar que vuelva. La diferencia al caminar se nota desde el primer momento.</p>
+      <p class="pc-q">Llevo meses con este callo y cada vez me molesta más al caminar.</p>
+      <span class="pc-label">Eliminamos el problema, pero también buscamos la causa.</span>
+      <p class="pc-a">Los callos suelen aparecer por un exceso de presión o roce. Además de eliminarlos de forma indolora, estudiamos por qué se producen y te damos las pautas necesarias para reducir la sobrecarga y evitar que vuelvan a convertirse en un problema.</p>
     </div>
     <div class="problem-card dark reveal reveal-d2" data-n="02">
-      <p class="pc-q">Tengo una uña encarnada desde hace semanas y ya no puedo ni ponerme el zapato</p>
-      <span class="pc-label">Lo que hacemos</span>
-      <p class="pc-a">Si el tratamiento local no es suficiente, resolvemos la uña encarnada en consulta y con anestesia local, sin necesidad de hospital.</p>
+      <p class="pc-q">Tengo una uña encarnada y ya no puedo caminar con normalidad.</p>
+      <span class="pc-label">Empezamos siempre por el tratamiento más conservador.</span>
+      <p class="pc-a">Valoramos el estado de la uña y el tejido que la rodea para decidir el tratamiento más adecuado. En muchos casos es posible resolver el problema sin cirugía, y cuando no lo es, realizamos el procedimiento en consulta con anestesia local y todas las garantías.</p>
     </div>
     <div class="problem-card dark reveal reveal-d3" data-n="03">
-      <p class="pc-q">Tengo las uñas muy feas y creo que son hongos, pero me da vergüenza enseñar los pies</p>
-      <span class="pc-label">Lo que hacemos</span>
-      <p class="pc-a">Es mucho más frecuente de lo que parece. Y no tiene nada que ver con la higiene. Valoramos qué está ocurriendo y aplicamos el tratamiento más adecuado. Sin juicios.</p>
+      <p class="pc-q">Tengo las uñas amarillas, gruesas o deformadas y creo que son hongos.</p>
+      <span class="pc-label">Antes de tratar, confirmamos el diagnóstico.</span>
+      <p class="pc-a">No todas las alteraciones de las uñas corresponden a una infección por hongos. Primero identificamos la causa y, a partir de ahí, pautamos el tratamiento podológico más adecuado y te explicamos cómo favorecer el crecimiento de una uña sana.</p>
+    </div>
+    <div class="problem-card dark reveal reveal-d1" data-n="04">
+      <p class="pc-q">Las durezas siempre vuelven aunque me las quite.</p>
+      <span class="pc-label">Eliminar la dureza es solo una parte del tratamiento.</span>
+      <p class="pc-a">Si la presión que la provoca continúa, volverá a aparecer. Analizamos cómo apoyas el pie y corregimos los factores que favorecen su formación para conseguir resultados más duraderos.</p>
+    </div>
+    <div class="problem-card dark reveal reveal-d2" data-n="05">
+      <p class="pc-q">Tengo una verruga en la planta del pie y cada vez duele más.</p>
+      <span class="pc-label">Cada verruga necesita un tratamiento diferente.</span>
+      <p class="pc-a">Valoramos su tamaño, profundidad y evolución para elegir el tratamiento más adecuado en cada caso. Durante todo el proceso realizamos un seguimiento para comprobar su evolución y adaptar el tratamiento cuando sea necesario.</p>
     </div>
   </div>
 
-  <div class="problem-cat reveal">Dolores al caminar</div>
+  <div class="problem-cat reveal">Dolor al caminar</div>
   <div class="problem-grid">
-    <div class="problem-card dark reveal reveal-d1" data-n="04">
-      <p class="pc-q">Me duele el talón cada mañana al dar los primeros pasos</p>
-      <span class="pc-label">Lo que hacemos</span>
-      <p class="pc-a">Analizamos cómo caminas. Si es necesario, diseñamos plantillas personalizadas, hechas para tu pie. El objetivo no es solo aliviar el dolor: es tratar el origen del problema.</p>
+    <div class="problem-card dark reveal reveal-d1" data-n="06">
+      <p class="pc-q">Me duele el talón cada mañana al dar los primeros pasos.</p>
+      <span class="pc-label">El dolor no siempre empieza donde lo notas.</span>
+      <p class="pc-a">Analizamos la forma de caminar, la movilidad del pie y las estructuras que pueden estar provocando la sobrecarga. El tratamiento combina terapia en consulta, recomendaciones personalizadas y, cuando está indicado, plantillas hechas a medida.</p>
     </div>
-    <div class="problem-card dark reveal reveal-d2" data-n="05">
-      <p class="pc-q">Llevo meses con una lesión en el pie que no me deja entrenar como quiero</p>
-      <span class="pc-label">Lo que hacemos</span>
-      <p class="pc-a">Analizamos tu pisada, tratamos la lesión y trabajamos contigo para que puedas volver a moverte con confianza y sin miedo a que el dolor reaparezca.</p>
+    <div class="problem-card dark reveal reveal-d2" data-n="07">
+      <p class="pc-q">Camino unos minutos y me empieza a doler la parte delantera del pie.</p>
+      <span class="pc-label">Descubrimos qué está sobrecargando tu pie.</span>
+      <p class="pc-a">La metatarsalgia puede tener diferentes causas. Estudiamos cómo se distribuye el apoyo al caminar y planteamos un tratamiento adaptado para aliviar la presión sobre la zona dolorosa y mejorar la función del pie.</p>
     </div>
-    <div class="problem-card dark reveal reveal-d3" data-n="06">
-      <p class="pc-q">He probado de todo y el talón sigue igual</p>
-      <span class="pc-label">Lo que hacemos</span>
-      <p class="pc-a">Hay dolores que no responden al reposo ni a los antiinflamatorios habituales. Cuando está indicado, realizamos infiltraciones para tratar directamente el foco del problema.</p>
+    <div class="problem-card dark reveal reveal-d3" data-n="08">
+      <p class="pc-q">Al final del día siento que los pies no pueden más.</p>
+      <span class="pc-label">Muchas molestias tienen relación con la forma de caminar.</span>
+      <p class="pc-a">Un estudio biomecánico nos permite conocer cómo funciona tu pisada y detectar alteraciones que pueden estar provocando dolor o sobrecargas. A partir de ahí, diseñamos un tratamiento personalizado.</p>
+    </div>
+    <div class="problem-card dark reveal reveal-d1" data-n="09">
+      <p class="pc-q">Siempre termino con dolor después de caminar o hacer deporte.</p>
+      <span class="pc-label">Buscamos el origen para evitar que la lesión se repita.</span>
+      <p class="pc-a">No nos centramos únicamente en aliviar el dolor. Valoramos los factores que favorecen la lesión para ayudarte a recuperar la actividad con mayor seguridad y reducir el riesgo de recaídas.</p>
+    </div>
+    <div class="problem-card dark reveal reveal-d2" data-n="10">
+      <p class="pc-q">He probado distintos tratamientos y sigo igual.</p>
+      <span class="pc-label">Cuando lo habitual no funciona, revisamos el diagnóstico.</span>
+      <p class="pc-a">Algunas lesiones requieren un abordaje diferente. Tras una valoración completa, podemos combinar distintos tratamientos y, únicamente cuando está indicado, recurrir a técnicas más avanzadas como las infiltraciones ecoguiadas.</p>
     </div>
   </div>
 </section>
@@ -1926,7 +1939,7 @@ img { max-width: 100%; height: auto; display: block; }
 
     <!-- Cabecera fija — no se mueve -->
     <div class="hs-header">
-      <div class="eyebrow">Lo que hacemos</div>
+
       <div class="hs-htitle">Servicios en <em>Talum</em></div>
     </div>
 
@@ -2000,31 +2013,11 @@ img { max-width: 100%; height: auto; display: block; }
   </div><!-- /hs-sticky -->
 </section>
 
-<!-- MARQUEE -->
-<div class="talum-marquee" aria-hidden="true">
-  <div class="talum-marquee__track">
-    <span>El dolor <em>no</em> es normal.</span><span class="talum-marquee__dot">·</span>
-    <span>Más de 40 años en Repelega.</span><span class="talum-marquee__dot">·</span>
-    <span>Del síntoma a la <em>causa.</em></span><span class="talum-marquee__dot">·</span>
-    <span>Sin prisas. Sin juicios.</span><span class="talum-marquee__dot">·</span>
-    <span>Cada pie es <em>diferente.</em></span><span class="talum-marquee__dot">·</span>
-    <span>Cuarta generación.</span><span class="talum-marquee__dot">·</span>
-    <span>Podología en <em>Portugalete.</em></span><span class="talum-marquee__dot">·</span>
-    <span>El dolor <em>no</em> es normal.</span><span class="talum-marquee__dot">·</span>
-    <span>Más de 40 años en Repelega.</span><span class="talum-marquee__dot">·</span>
-    <span>Del síntoma a la <em>causa.</em></span><span class="talum-marquee__dot">·</span>
-    <span>Sin prisas. Sin juicios.</span><span class="talum-marquee__dot">·</span>
-    <span>Cada pie es <em>diferente.</em></span><span class="talum-marquee__dot">·</span>
-    <span>Cuarta generación.</span><span class="talum-marquee__dot">·</span>
-    <span>Podología en <em>Portugalete.</em></span><span class="talum-marquee__dot">·</span>
-  </div>
-</div>
-
 <!-- QUIÉNES SOMOS -->
 <section class="sec sec-off" id="equipo">
   <div class="team-layout">
     <div class="team-header">
-      <div class="eyebrow reveal">Quiénes somos</div>
+
       <h2 class="sec-title reveal reveal-d1">Un proyecto de barrio.<br><em>La cuarta generación.</em></h2>
     </div>
 
@@ -2049,100 +2042,83 @@ img { max-width: 100%; height: auto; display: block; }
       <picture><source srcset="assets/ameli.webp" type="image/webp"><img class="team-photo" src="assets/ameli.jpg" alt="Ameli, recepción en Talum Clínica Podológica, Repelega Portugalete" style="object-position: center 5%;" loading="lazy" decoding="async"></picture>
     </div>
 
-    <div class="family-block">
-      <div>
-        <div class="family-years">40+<span>años en Repelega</span></div>
-      </div>
-      <div class="family-text">
-        <p>Este local lleva <strong>más de 40 años</strong> formando parte de Portugalete. Lo que antes fue un negocio familiar, hoy es una clínica de podología.</p>
-        <p style="margin-top:0.9rem;">La <strong>cuarta generación de la misma familia</strong> sigue aquí, con el mismo compromiso de siempre: estar cerca de la gente del barrio. No somos ninguna franquicia. No somos una clínica de paso.</p>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- COMPROMISOS -->
 <section class="sec sec-dark" id="compromisos">
-  <div class="eyebrow reveal" style="color: var(--terra-l);">Cómo trabajamos</div>
-  <h2 class="sec-title on-dark reveal reveal-d1">Nuestros compromisos<br>en <em>Talum</em></h2>
+
+  <h2 class="sec-title on-dark reveal reveal-d1">Nuestro compromiso<br><em>contigo</em></h2>
+  <p class="sec-lead on-dark reveal reveal-d2">Sabemos que cuando aparece un dolor en el pie o una molestia al caminar, lo que más necesitas es entender qué te ocurre y saber qué opciones tienes. Por eso, nuestra forma de trabajar se basa en escuchar, valorar cada caso de manera individual y recomendar solo aquello que realmente puede ayudarte.</p>
 
   <div class="compromisos-grid reveal">
     <div class="compromiso reveal">
       <div class="comp-num">1</div>
-      <div class="comp-title">Solo proponemos lo que realmente necesitas</div>
-      <p class="comp-desc">Si tu problema tiene una solución sencilla, te la explicaremos y la aplicaremos. Sin tratamientos innecesarios y sin visitas de más.</p>
+      <div class="comp-title">Te recomendamos solo lo que necesitas</div>
+      <p class="comp-desc">No todos los problemas requieren un tratamiento complejo. Si existe una solución sencilla, será la primera que te propondremos. Nuestro objetivo no es que vengas más veces, sino ayudarte a mejorar con el tratamiento más adecuado para tu caso.</p>
     </div>
     <div class="compromiso reveal reveal-d1">
       <div class="comp-num">2</div>
-      <div class="comp-title">Te diremos con honestidad hasta dónde podemos ayudarte</div>
-      <p class="comp-desc">Si necesitas algo que aquí no podemos ofrecer, te lo diremos con claridad y te orientaremos hacia el profesional adecuado.</p>
+      <div class="comp-title">Buscamos la causa de tu problema</div>
+      <p class="comp-desc">No nos centramos únicamente en aliviar el dolor. Durante la valoración analizamos cómo apoyas el pie, cómo caminas y qué puede estar provocando la molestia para ofrecerte una solución adaptada a ti. Cada persona es diferente y cada tratamiento también debe serlo.</p>
     </div>
     <div class="compromiso reveal reveal-d2">
       <div class="comp-num">3</div>
-      <div class="comp-title">Cada consulta tiene su tiempo</div>
-      <p class="comp-desc">No trabajamos con prisas ni consultas encadenadas. Cada persona y cada problema merecen ser atendidos con calma.</p>
+      <div class="comp-title">Te atendemos sin prisas</div>
+      <p class="comp-desc">Una buena valoración necesita tiempo. Queremos escuchar cómo empezó el problema, resolver todas tus dudas y explicarte cada paso del tratamiento con un lenguaje claro y fácil de entender.</p>
     </div>
     <div class="compromiso reveal reveal-d3">
       <div class="comp-num">4</div>
-      <div class="comp-title">El asesoramiento en calzado es independiente</div>
-      <p class="comp-desc">Si te recomendamos algo, será porque creemos que puede ayudarte. No tenemos acuerdos comerciales con marcas.</p>
+      <div class="comp-title">Nuestras recomendaciones son independientes</div>
+      <p class="comp-desc">Si te aconsejamos un tipo de calzado, una plantilla o cualquier otro tratamiento, lo hacemos únicamente porque creemos que es la mejor opción para ti. Nuestras decisiones se basan en criterios clínicos y en las necesidades de cada paciente.</p>
     </div>
     <div class="compromiso reveal reveal-d4">
       <div class="comp-num">5</div>
-      <div class="comp-title">Queremos que entiendas qué te pasa</div>
-      <p class="comp-desc">No saldrás de la consulta con dudas. Te explicaremos qué ocurre, por qué sucede y qué opciones hay para tratarlo.</p>
+      <div class="comp-title">Queremos que salgas entendiendo qué te ocurre</div>
+      <p class="comp-desc">Antes de terminar la consulta sabrás cuál es el origen de tu problema, por qué ha aparecido y qué puedes hacer para mejorar. Creemos que comprender lo que ocurre en tus pies es el primer paso para recuperar la comodidad al caminar y tomar decisiones con tranquilidad.</p>
     </div>
   </div>
 </section>
 
 <!-- PRIMERA VISITA -->
 <section class="sec" id="primera-visita">
-  <div class="eyebrow reveal">Primera visita</div>
-  <h2 class="sec-title reveal reveal-d1">Ven tranquilo.<br><em>Sin sorpresas.</em></h2>
-  <p class="sec-lead reveal reveal-d2">Ir al podólogo por primera vez genera dudas. Aquí te lo contamos todo para que vengas tranquilo.</p>
-
-  <div class="visit-layout">
+  <div class="pv-header">
     <div>
-      <div class="steps">
-        <div class="step reveal">
-          <div class="step-num">1</div>
-          <div>
-            <div class="step-title">Primero, te escuchamos</div>
-            <p class="step-text">Antes de mirar nada, queremos saber qué te pasa, desde cuándo y cómo te afecta en el día a día. A veces lo más importante no está en el pie, sino en lo que el paciente cuenta.</p>
-          </div>
-        </div>
-        <div class="step reveal reveal-d1">
-          <div class="step-num">2</div>
-          <div>
-            <div class="step-title">Luego, exploramos</div>
-            <p class="step-text">Miramos el pie con detenimiento. La piel, las uñas, la forma en que apoyas, cualquier señal que nos ayude a entender qué está ocurriendo.</p>
-          </div>
-        </div>
-        <div class="step reveal reveal-d2">
-          <div class="step-num">3</div>
-          <div>
-            <div class="step-title">Y si es posible, actuamos ese mismo día</div>
-            <p class="step-text">Si el problema lo permite, no te mandamos a casa sin más. Tratamos en la misma visita siempre que podemos.</p>
-          </div>
-        </div>
-        <div class="step reveal reveal-d3">
-          <div class="step-num">4</div>
-          <div>
-            <div class="step-title">Saldrás sabiendo qué tienes</div>
-            <p class="step-text">Sin tecnicismos, sin diagnósticos a medias. Qué te pasa, por qué te pasa y qué vamos a hacer al respecto.</p>
-          </div>
-        </div>
+      <h2 class="sec-title reveal reveal-d1">Cómo trabajamos<br>en <em>Talum</em></h2>
+    </div>
+    <div>
+      <p class="pv-subtitle reveal">Qué puedes esperar de tu primera consulta</p>
+      <p class="sec-lead reveal reveal-d2">Sabemos que acudir por primera vez al podólogo puede generar dudas. Por eso queremos que desde el primer momento te sientas escuchado y entiendas qué está ocurriendo.</p>
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="step reveal">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">Lo primero será conocer tu caso</div>
+        <p class="step-text">Hablaremos sobre cuándo empezó el problema, cómo afecta a tu día a día y qué has probado hasta ahora. Después realizaremos una valoración completa para entender el origen de la molestia, no solo el dolor que notas.</p>
       </div>
     </div>
-
-    <div class="visit-promise reveal">
-      <h3>Lo que no va a pasar<br>en esa <em>visita</em></h3>
-      <div class="promise-list">
-        <div class="promise-item reveal">No te haremos nada sin explicarte antes qué es y para qué sirve.</div>
-        <div class="promise-item reveal reveal-d1">No se toca nada sin que tú lo sepas y lo consientas.</div>
-        <div class="promise-item reveal reveal-d2">No hay prisas. La primera consulta dura entre 40 y 50 minutos. Ese tiempo es tuyo.</div>
-        <div class="promise-item reveal reveal-d3">Si necesitas más de una visita, te lo decimos con honestidad.</div>
-        <div class="promise-item reveal reveal-d4">Si lo que necesitas no lo podemos hacer aquí, también te lo decimos.</div>
+    <div class="step reveal reveal-d1">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">Te explicaremos qué hemos observado</div>
+        <p class="step-text">De forma sencilla: qué hemos visto, por qué puede estar ocurriendo y qué opciones de tratamiento son las más adecuadas para ti.</p>
+      </div>
+    </div>
+    <div class="step reveal reveal-d2">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">La solución conservadora, siempre primero</div>
+        <p class="step-text">Si existe una opción sencilla, será la primera que valoremos. Y si consideramos que necesitas otro tipo de atención o pruebas complementarias, también te lo explicaremos con total claridad.</p>
+      </div>
+    </div>
+    <div class="step reveal reveal-d3">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-title">Saldrás con un plan claro</div>
+        <p class="step-text">Nuestro objetivo es que salgas de la consulta con las respuestas que necesitas y los pasos concretos para empezar a mejorar.</p>
       </div>
     </div>
   </div>
@@ -2150,7 +2126,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 <!-- FAQ -->
 <section class="sec" id="faq">
-  <div class="eyebrow reveal">Preguntas frecuentes</div>
+
   <h2 class="sec-title reveal reveal-d1">Lo que más<br>nos <em>preguntan</em></h2>
 
   <p class="faq-hint reveal">Pulsa en cada pregunta para ver la respuesta</p>
@@ -2214,7 +2190,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 <!-- UBICACIÓN -->
 <section class="sec" id="ubicacion">
-  <div class="eyebrow reveal">Dónde estamos</div>
+
   <h2 class="sec-title reveal reveal-d1">Tu podólogo<br>en <em>Repelega, Portugalete</em></h2>
 
   <div class="ubicacion-layout">
@@ -2241,19 +2217,12 @@ img { max-width: 100%; height: auto; display: block; }
             <small>También por teléfono</small>
           </div>
         </div>
-        <div class="info-block reveal reveal-d3">
-          <div class="info-block-label">Área de cobertura</div>
-          <div class="info-block-val">
-            Portugalete · Sestao · Santurtzi
-            <small>Barakaldo · Bizkaia (a domicilio)</small>
-          </div>
-        </div>
       </div>
     </div>
 
     <div class="map-wrap reveal reveal-d2">
       <iframe
-        src="https://maps.google.com/maps?q=Floristeria+Kiara+Repelega+Portugalete&output=embed&t=k&z=18"
+        src="https://maps.google.com/maps?q=Talum+Cl%C3%ADnica+Podol%C3%B3gica+Avenida+Repelega+11+Portugalete&output=embed&t=k&z=18"
         allowfullscreen
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
@@ -2266,7 +2235,7 @@ img { max-width: 100%; height: auto; display: block; }
 <!-- CTA FINAL -->
 <section class="cta-section" id="contacto">
   <div class="cta-inner">
-    <div class="eyebrow reveal" style="color:var(--terra-l);justify-content:center;">Pide tu cita</div>
+
     <h2 class="cta-title reveal reveal-d1">¿Te pasa algo<br>parecido? <em>Podemos<br>valorarlo.</em></h2>
     <p class="cta-desc reveal reveal-d2">Consulta en Avenida Repelega 11, Portugalete.<br>Sin prisas. Sin tratamientos innecesarios.</p>
     <div class="cta-btns reveal reveal-d3">
