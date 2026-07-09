@@ -1394,7 +1394,7 @@ footer {
   .footer-main { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
 }
 @media (max-width: 600px) {
-  .footer-main { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 6vw 2.5rem; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3rem 6vw 2.5rem; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
 
@@ -1635,7 +1635,8 @@ footer {
   .steps { grid-template-columns: 1fr; }
   .step:nth-last-child(-n+2) { border-bottom: none; }
   .step:last-child { border-bottom: 1px solid rgba(27,42,59,0.07); }
-  .info-blocks { grid-template-columns: 1fr; }
+  .info-blocks { grid-template-columns: 1fr 1fr; }
+  .info-blocks .info-block:last-child { grid-column: 1 / -1; }
   .problem-grid  { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
 }
@@ -1656,8 +1657,8 @@ img { max-width: 100%; height: auto; display: block; }
   .scroll-hint { display: none !important; }
   /* Marquee: reducir tamaño en móvil */
   .talum-marquee__track { font-size: clamp(1.4rem, 7vw, 2rem); }
-  /* Footer: una columna */
-  .footer-main { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 6vw 2.5rem; }
+  /* Footer: dos columnas */
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3rem 6vw 2.5rem; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   /* FAQ: ajustar padding del summary */
   .faq-summary { padding: 1.2rem 0.5rem; font-size: 0.88rem; }
