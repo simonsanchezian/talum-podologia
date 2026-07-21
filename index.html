@@ -1849,8 +1849,8 @@ img { max-width: 100%; height: auto; display: block; }
 #video-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to bottom, rgba(15,26,38,.5) 0%, rgba(15,26,38,.08) 40%, rgba(15,26,38,.65) 100%);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; padding: 2rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+  text-align: center; padding: 2rem 2rem 4.5rem;
 }
 .hero-logo { height: 120px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1.2rem; opacity: 0.92; }
 .hero-brand-row { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.4rem; width: 100%; justify-content: center; }
@@ -1867,8 +1867,14 @@ img { max-width: 100%; height: auto; display: block; }
 .v-btn-primary:hover { background: var(--terra-l); transform: translateY(-2px); }
 .v-btn-wa { display: inline-flex; align-items: center; gap: .5rem; padding: .9rem 1.6rem; background: #25D366; color: var(--white); border-radius: 4px; font-size: .92rem; font-weight: 500; text-decoration: none; transition: background .2s, transform .15s; }
 .v-btn-wa:hover { background: #1da851; transform: translateY(-2px); }
-.scroll-hint { margin-top: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: .5rem; color: rgba(255,255,255,.45); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; }
-@media (max-height: 700px) { .scroll-hint { display: none !important; } }
+.scroll-hint {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: .6rem;
+  color: rgba(255,255,255,.45); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.scroll-hint span { writing-mode: vertical-rl; }
+.scroll-hint.scroll-hint-left { left: 2.2rem; }
+.scroll-hint.scroll-hint-right { right: 2.2rem; }
 .scroll-hint-line { width: 1px; height: 38px; background: linear-gradient(to bottom, rgba(255,255,255,.45), transparent); animation: scrollDown 2s ease-in-out infinite; }
 @keyframes scrollDown { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
 #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--terra); width: 0%; z-index: 300; pointer-events: none; }
@@ -1950,7 +1956,8 @@ img { max-width: 100%; height: auto; display: block; }
       <a href="https://citasonline.clinicbai.com/reservatucita" target="_blank" rel="noopener noreferrer" class="v-btn-primary">Pedir cita &rarr;</a>
       <a href="https://wa.me/34681800118?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informaci%C3%B3n%20y%20cita%20en%20Talum." target="_blank" rel="noopener noreferrer" class="v-btn-wa"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
     </div>
-    <div class="scroll-hint"><span>Desplázate</span><div class="scroll-hint-line"></div></div>
+    <div class="scroll-hint scroll-hint-left"><span>Desplázate</span><div class="scroll-hint-line"></div></div>
+    <div class="scroll-hint scroll-hint-right"><span>Desplázate</span><div class="scroll-hint-line"></div></div>
   </div>
   </div>
 </section>
