@@ -1849,8 +1849,8 @@ img { max-width: 100%; height: auto; display: block; }
 #video-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to bottom, rgba(15,26,38,.5) 0%, rgba(15,26,38,.08) 40%, rgba(15,26,38,.65) 100%);
-  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
-  text-align: center; padding: 2rem 2rem 4.5rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 8vh 2rem 2rem;
 }
 .hero-logo { height: 120px; width: auto; filter: brightness(0) invert(1); margin-bottom: 1.2rem; opacity: 0.92; }
 .hero-brand-row { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.4rem; width: 100%; justify-content: center; }
@@ -1875,6 +1875,17 @@ img { max-width: 100%; height: auto; display: block; }
 .scroll-hint span { writing-mode: vertical-rl; }
 .scroll-hint.scroll-hint-left { left: 2.2rem; }
 .scroll-hint.scroll-hint-right { right: 2.2rem; }
+@media (max-height: 760px) and (min-width: 961px) {
+  #video-overlay { padding-top: 3vh; }
+  .hero-logo { height: 80px; margin-bottom: .6rem; }
+  .v-eyebrow { margin-bottom: .6rem; }
+  .v-title { font-size: clamp(2.2rem, 4.6vw, 4rem); margin-bottom: .8rem; }
+  .v-sub { margin-bottom: 1.3rem; }
+  .hero-brand-row { margin-bottom: .8rem; }
+}
+@media (max-height: 700px) and (min-width: 961px) {
+  .v-sub { display: none; }
+}
 .scroll-hint-line { width: 1px; height: 38px; background: linear-gradient(to bottom, rgba(255,255,255,.45), transparent); animation: scrollDown 2s ease-in-out infinite; }
 @keyframes scrollDown { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform: scaleY(1); transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
 #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--terra); width: 0%; z-index: 300; pointer-events: none; }
